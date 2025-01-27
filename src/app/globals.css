@@ -14,23 +14,40 @@
   --font-geist-mono: "Geist Mono", monospace;
 }
 
-body {
-  font-family: var(--font-montserrat); /* Default to Montserrat */
+/* Satoshi Font */
+@font-face {
+  font-family: "Satoshi";
+  src: url("../../public/fonts/Satoshi-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
 }
 
-h1, h2, h3 {
-  font-family: var(--font-geist-sans); /* Use Geist Sans for headings */
+@font-face {
+  font-family: "Satoshi";
+  src: url("../../public/fonts/Satoshi-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
 }
 
-code {
-  font-family: var(--font-geist-mono); /* Use Geist Mono for code */
+/* Proxima Nova Font */
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../../public/fonts/ProximaNova-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
 }
 
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../../public/fonts/Proxima-Nova-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
 }
 
 @layer utilities {

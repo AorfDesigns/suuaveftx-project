@@ -11,37 +11,17 @@ import Footer from "./landingpage/_components/Footer";
 
 export default function Home() {
   return (
-    <div>
-     <main>
-     <>
-    <AppLayout2>
-    <div className='mb-8'>
+    <div className="max-w-[1700px] mx-auto">
+      <AppLayout2>
         <HeroSection />
-    </div>
-    </AppLayout2>
-    <div className='mb-40'>
-        <WhySuaave />
-    </div>
-    <div className='mb-8'>
+      </AppLayout2>
+      <WhySuaave />
       <HowItWorks />
-    </div>
-    <div className='mb-8'>
       <ImageFashion />
-    </div>
-    <div className='mb-8'>
       <ImageDesigners />
-    </div>
-    <div className='mb-8'>
       <ExploreComponent />
-    </div>
-    <div className='mb-8'>
       <Banner />
-    </div>
-    <div className='mt-10'>
       <Footer />
-    </div>
-    </>
-     </main>
     </div>
   );
 }
