@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -38,7 +39,7 @@ const Footer = () => {
           <ul className="space-y-2 text-sm">
             <li>Job Posts</li>
             <li>Explore Talents</li>
-            <li>How it Works</li>
+            <li>How It Works</li>
           </ul>
         </div>
 
@@ -62,24 +63,30 @@ const Footer = () => {
 </h2>
 
         <div className="flex justify-center items-center gap-6 mt-4">
+          <Link href={"https://www.instagram.com/suuaveftx?igsh=dWgzYzF6YXl5M3N3"}>
+        <Image
+            src="/dev-images/insta.png"
+            alt="Instagram"
+            width={40}
+            height={40}
+          />
+          </Link>
+          <Link href={"https://x.com/SuuaveFTx"}>
+           <Image
+            src="/dev-images/X.png"
+            alt="X"
+            width={40}
+            height={40}
+          />
+        </Link>
+        <Link href={"/"}>
           <Image
             src="/dev-images/Face.png"
             alt="Facebook"
             width={40}
             height={40}
           />
-          <Image
-            src="/dev-images/insta.png"
-            alt="Instagram"
-            width={40}
-            height={40}
-          />
-          <Image
-            src="/dev-images/X.png"
-            alt="X"
-            width={40}
-            height={40}
-          />
+     </Link>
         </div>
       </div>
     </footer>

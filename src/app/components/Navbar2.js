@@ -1,4 +1,5 @@
 'use client'
+import Image from "next/image";
 import { useState } from "react";
 const Navbar2 = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -8,7 +9,13 @@ const Navbar2 = () => {
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center">
-          <h1 className="text-2xl font-bold">Logo</h1>
+        <Image
+            src="/dev-images/logo.png"
+            alt="Logo"
+            width={40}
+            height={40}
+            className="mb-4 sm:mb-0" // Reduced space between the logo and form
+          />
         </div>
 
         {/* Right Section for Mobile */}
@@ -32,7 +39,7 @@ const Navbar2 = () => {
             <a href="#blogs">Blogs</a>
           </li>
           <li>
-            <a href="#how-it-works">How it works</a>
+            <a href="#how-it-works">How It Works</a>
           </li>
           <li>
             <a href="#faqs">FAQs</a>

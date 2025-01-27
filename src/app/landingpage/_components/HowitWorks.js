@@ -2,26 +2,29 @@ import Image from "next/image"; // Only needed if using Next.js for image optimi
 
 const HowItWorks = () => {
   return (
-    <div className="mt-12 p-6">
-      {/* Disabled Button */}
-      <button
-        className="bg-[#EAF9FF] text-[#035A7A] px-6 py-3 rounded-full text-lg cursor-not-allowed flex items-center justify-center gap-2"
-        disabled
-      >
-        <Image
-          src="/dev-images/Microphone.png" // Replace with your icon's path
-          alt="Icon"
-          className="w-5 h-5"
-          width={50}
-          height={50}
-        />
-        How it works
-      </button>
+    <div>
+      {/* Grouped Section */}
+      <div className="mt-8 ml-8">
+        {/* Disabled Button */}
+        <button
+          className="bg-[#EAF9FF] text-[#035A7A] px-6 py-3 rounded-full text-lg cursor-not-allowed flex items-center gap-2"
+          disabled
+        >
+          <Image
+            src="/dev-images/Microphone.png" // Replace with your icon's path
+            alt="Icon"
+            className="w-5 h-5"
+            width={50}
+            height={50}
+          />
+          How it works
+        </button>
 
-      {/* Supporting Text */}
-      <p className="mt-4 text-[32px] md:text-4xl text-[#404040] font-medium">
-        Let&apos;s help you achieve your goals.
-      </p>
+        {/* Supporting Text */}
+        <p className="mt-4 text-[32px] md:text-4xl text-[#404040] font-bold">
+          Let&apos;s help you achieve your goals.
+        </p>
+      </div>
 
       {/* Image Section */}
       <div className="mt-6">

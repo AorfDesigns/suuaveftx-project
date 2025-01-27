@@ -26,7 +26,7 @@ const Login = () => {
           </div>
           {/* Background image hidden on mobile */}
           <div className="md:block hidden mt-8">
-            <Image src="/dev-images/bg.png" alt="Background Image" className="rounded-lg w-full h-auto" />
+            <Image src="/dev-images/bg.png" alt="Background Image" className="rounded-lg w-full h-auto" width={600} height={600} />
           </div>
         </div>
 

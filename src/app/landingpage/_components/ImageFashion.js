@@ -27,8 +27,7 @@ const ImageFashion = () => {
             />
             <h4 className="text-lg font-extrabold text-white text-left">Register</h4>
             <p className="text-sm text-[#888888] text-left">
-              Join over 5000 other artists and illustrators by signing up with
-              your email address and through Google. Easy and seamless sign-up.
+            Join over 5000 other artists and sign up seamlessly
             </p>
           </div>
 
@@ -45,9 +44,8 @@ const ImageFashion = () => {
               Apply for Jobs
             </h4>
             <p className="text-sm text-[#888888] text-left">
-              Browse job postings from top designers/brands seeking African
-              fashion expertise and apply for projects that match your skills
-              and style.
+            Browse job boards and apply for exciting projects with fashion designers and brands. Target opportunities that showcase your unique skills and design style.
+
             </p>
           </div>
 
@@ -60,11 +58,10 @@ const ImageFashion = () => {
               height={30}
             />
             <h4 className="text-lg font-extrabold text-white">
-              Publish your Designs
+              Monetize Your Vision
             </h4>
             <p className="text-sm text-[#888888]">
-              Post your designs for brands/designers to license or buy exclusive
-              rights to use in their collections. Earn money.
+            Upload your designs and earn income by licensing them to top fashion designers and brands.
             </p>
           </div>
 
@@ -78,8 +75,7 @@ const ImageFashion = () => {
             />
             <h4 className="text-lg font-extrabold text-white text-left">Get Paid</h4>
             <p className="text-sm text-[#888888] text-left">
-              Your payment is automatically processed after a satisfactory job
-              and when your designs are licensed.
+            Your payment is automatically processed after project completion and licensing
             </p>
           </div>
         </div>

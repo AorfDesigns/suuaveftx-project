@@ -22,12 +22,12 @@ const ExploreComponent = () => {
     <div className="bg-gray-100 p-8">
       {/* Disabled Button */}
       <div className="mb-2">
-        <button
+        {/* <button
           className="bg-[#EAF9FF] text-[#035A7A] px-6 py-3 rounded-full cursor-not-allowed"
           disabled
         >
           Find Talented Fashion Artist
-        </button>
+        </button> */}
       </div>
 
       {/* Header and Subtext */}
@@ -128,9 +128,8 @@ const ExploreComponent = () => {
 
 
 <div className="absolute inset-0  flex-col justify-center items-center text-center text-white pl-[8px] pr-[8px] pt-[12px] pb-[12px] rounded mt-[450px] bg-black bg-opacity-50 w-[320px] h-[189px] mx-auto hidden sm:block">
-  <p className="text-base mb-8 w-[304px] h-[76px] mt-2">
-    All designs are licensable and available for <br /> collaborations. <br /> You are
-    just a step away from owning the right to use these designs.
+  <p className="text-base  w-[304px] h-[76px] mt-2">
+     You are just a step away from owning the right to use these designs.
   </p>
   <button
     className="bg-[] px-4 py-2 rounded-full text-[#035A7A] font-bold mb-8"

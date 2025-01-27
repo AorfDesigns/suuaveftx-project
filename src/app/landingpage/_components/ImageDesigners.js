@@ -18,7 +18,7 @@ const ImageDesigners = () => {
       <div className="flex-1 p-6 lg:p-12 space-y-6 bg-[#124456]">
         {/* Sub-header */}
         <h3 className="text-[#049AD1] text-sm font-semibold tracking-wide">
-          For Fashion Designers / Brand
+          FOR FASHION DESIGNERS/BRANDS
         </h3>
 
         {/* Main Header */}

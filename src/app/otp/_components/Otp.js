@@ -45,6 +45,8 @@ const Otp = () => {
       src="/dev-images/bg.png" 
       alt="Background Image" 
       className="rounded-lg w-full h-auto md:w-[574px] md:h-[700px]" 
+      width={574}
+      height={700}
     />
   </div>
 </div>

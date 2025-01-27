@@ -5,11 +5,6 @@ const HeroSection = () => {
   return (
     <div
     className="flex flex-col md:flex-row justify-between items-center bg-[#000B0F] text-white px-6 py-12"
-    style={{
-      backgroundImage: "url('/dev-images/Mask.png')", // Replace with your image path
-      backgroundSize: "cover", // Ensures the image covers the entire div
-      backgroundPosition: "center", // Centers the image
-    }}
   >
     {/* Left Section */}
     <div className="max-w-md text-center md:text-left flex flex-col items-center md:items-start">
@@ -40,7 +35,12 @@ const HeroSection = () => {
     </div>
   
     {/* Right Section */}
-    <div className="md:block md:ml-10">
+    <div className="md:block md:ml-10"
+    style={{
+      backgroundImage: "url('/dev-images/Mask.png')", // Replace with your image path
+      backgroundSize: "cover", // Ensures the image covers the entire div
+      backgroundPosition: "center", // Centers the image
+    }}>
       <Image
         src="/dev-images/SideHero.png" // Desktop image path
         alt="Fashion Collaboration"

@@ -146,7 +146,7 @@ const WhySuaave = () => {
             background: "radial-gradient(circle, #EAF9FF 19%, #CCE7F2 100%)",
           }}
         >
-          Join 500+ Members
+          Join 5000+ Members
         </button>
       </div>
 

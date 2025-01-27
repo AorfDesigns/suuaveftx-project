@@ -19,7 +19,7 @@ export default function Home() {
         <HeroSection />
     </div>
     </AppLayout2>
-    <div className='mb-8'>
+    <div className='mb-40'>
         <WhySuaave />
     </div>
     <div className='mb-8'>

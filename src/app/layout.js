@@ -1,26 +1,28 @@
 import localFont from "next/font/local";
-import { Montserrat } from "@next/font/google"; // Import Montserrat
+
 import "./globals.css";
 
-// Local Fonts
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+
+// Satoshi Font
+const satoshi = localFont({
+  src: [
+    {
+      path: "./fonts/Satoshi-Regular.woff",
+      weight: "400", // Regular
+    },
+    {
+      path: "./fonts/Satoshi-Medium.woff",
+      weight: "500", // Medium
+    },
+    {
+      path: "./fonts/Satoshi-Black.woff",
+      weight: "900", // Black
+    },
+  ],
+  variable: "--font-satoshi",
 });
 
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
 
-// Montserrat Font
-const montserrat = Montserrat({
-  subsets: ["latin"], // Load Latin subset
-  variable: "--font-montserrat", // Define a custom variable for Montserrat
-  weight: ["400", "700"], // Load specific weights
-});
 
 // Metadata
 export const metadata = {
@@ -33,7 +35,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} antialiased`}
+        className={`${satoshi.variable}  antialiased`}
       >
         {children}
       </body>
