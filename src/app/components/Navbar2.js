@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Image from "next/image";
 import { useState } from "react";
 const Navbar2 = () => {
@@ -9,7 +9,7 @@ const Navbar2 = () => {
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center">
-        <Image
+          <Image
             src="/dev-images/logo.png"
             alt="Logo"
             width={40}
@@ -84,7 +84,8 @@ const Navbar2 = () => {
             <button
               className="text-[#035A7A] px-6 py-3 rounded-full transition hover:opacity-90"
               style={{
-                background: "radial-gradient(circle, #EAF9FF 19%, #CCE7F2 100%)",
+                background:
+                  "radial-gradient(circle, #EAF9FF 19%, #CCE7F2 100%)",
               }}
             >
               Get Started

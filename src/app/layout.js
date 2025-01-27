@@ -2,7 +2,6 @@ import localFont from "next/font/local";
 
 import "./globals.css";
 
-
 // Satoshi Font
 const satoshi = localFont({
   src: [
@@ -22,8 +21,6 @@ const satoshi = localFont({
   variable: "--font-satoshi",
 });
 
-
-
 // Metadata
 export const metadata = {
   title: "SuuaveFTX",
@@ -34,11 +31,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${satoshi.variable}  antialiased`}
-      >
-        {children}
-      </body>
+      <body className={`font-satoshi`}>{children}</body>
     </html>
   );
 }
