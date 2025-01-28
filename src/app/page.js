@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import HeroSection from "./landingpage/_components/Hero";
 import AppLayout2 from "./components/Applayout2";
 import WhySuaave from "./landingpage/_components/WhySuaave";
