@@ -12,16 +12,26 @@ import Footer from "./landingpage/_components/Footer";
 export default function Home() {
   return (
     <div className="max-w-[1700px] mx-auto">
-      <AppLayout2>
+  
+     
+    <AppLayout2>
+
         <HeroSection />
-      </AppLayout2>
-      <WhySuaave />
+    </AppLayout2>
+
+        <WhySuaave />
+  
       <HowItWorks />
+
       <ImageFashion />
       <ImageDesigners />
+  
       <ExploreComponent />
+    
       <Banner />
+  
       <Footer />
     </div>
+    
   );
 }
