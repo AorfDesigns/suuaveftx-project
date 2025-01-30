@@ -82,7 +82,7 @@ const ImageFashion = () => {
             </CardFooter>
           </Card>
         </ScrollParallax>
-        <Image src="/dev-images/womanDesigning.png" className=" -z-0" />
+        <Image src="/dev-images/womanDesigning.png" className=" -z-0" alt="woman Designing" />
         {/* second floting card */}
         <ScrollParallax isAbsolutelyPositioned strength={0.07} zIndex={10}>
           <Card className="w-fit absolute z-10  -left-12 bottom-8 ">
