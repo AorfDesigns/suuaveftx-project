@@ -1,5 +1,3 @@
-
-
 import React from "react";
 import { BackgroundBeams } from "../../../components/BackgroundBeam";
 import { Image } from "@heroui/react";
@@ -68,9 +66,10 @@ const HeroSection = () => {
             />
           </ScrollParallax>
           <Image
-          alt='hero_right'
+            alt="hero_right"
             src="/dev-images/heroRight.png"
             className="w-[84%] place-self-end"
+            disableSkeleton
           />
           <ScrollParallax isAbsolutelyPositioned strength={0.05} zIndex={30}>
             <HeroSlimCard
