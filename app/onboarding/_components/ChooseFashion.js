@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import CustomButton from '../../../components/CustomButton';
 
 const ChooseFashion = () => {
   return (
@@ -55,10 +56,10 @@ const ChooseFashion = () => {
     </div>
   </Link>
 </div>
+  <div className="mt-16">
+    <CustomButton className="ml-14 w-80 text-lg h-[52px]" text="Continue" href='/signup' />
+  </div>
 
-      <button className="mt-[80px] w-full max-w-[360px] h-[50px] bg-[#CCE7F2] text-black font-medium text-base rounded-full shadow-sm hover:bg-[#B2D8E7] transition-all">
-        Continue
-      </button>
     </div>
   );
 };
