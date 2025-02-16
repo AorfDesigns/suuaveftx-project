@@ -1,6 +1,8 @@
 'use client';
+import { Form, Input } from '@heroui/react';
 import Link from 'next/link';
 import React, { useState } from 'react';
+import CustomButton from '../../../components/CustomButton';
 
 const Awards = () => {
   const [awardName, setAwardName] = useState('');
@@ -17,39 +19,43 @@ const Awards = () => {
   const handleFileUpload = (e) => {
     setCertificate(e.target.files[0]);
   };
-
+  const onSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const data = Object.fromEntries(formData.entries());
+    setSubmitted(data);
+  };
   return (
-    <div className="flex justify-center items-center min-h-screen  border border-1 border-[#DEDEDE] rounded-lg">
-      <div className="bg-transparent  pl-8 pr-8  pt-8 pb-[42px] w-[1083px]  border border-1 border-[#DEDEDE] rounded-lg">
+    <div className="flex justify-center items-center min-h-screen   border-1 border-[#DEDEDE] rounded-lg">
+      <div className="bg-transparent  pl-8 pr-8  pt-8 pb-[42px] w-[1083px]   border-1 border-[#DEDEDE] rounded-lg">
         <h2 className="text-[16px] font-semibold mb-2 text-[#3A98BB]">Awards/Certification (Optional)</h2>
         <p className="text-red-400 mb-8 text-[12px]">Add to increase your chances.</p>
 
-        {/* Name of Award/Certificate */}
-        <div className="mb-6">
-          <label className="block text-[12px] font-medium mb-2 text-[#444444]">Name of Award/Certificate</label>
-          <input
-            type="text"
-            value={awardName}
-            onChange={(e) => setAwardName(e.target.value)}
-            className="border border-gray-300 rounded-md pl-[12px] pr-[25px] pt-[12px] pb-[12px] w-full focus:border-[#3A98BB] focus:border-2 focus:outline-none bg-transparent text-[12px] mb-8"
-            placeholder="Eg Best Illustrator Award"
-          />
-        </div>
-
-        {/* Awarded/Issued By */}
-        <div className="mb-6">
-          <label className="block text-[12px] font-medium mb-1 text-[#444444]">Awarded/Issued By</label>
-          <input
-            type="text"
-            value={awardedBy}
-            onChange={(e) => setAwardedBy(e.target.value)}
-            className="border border-gray-300 rounded-md pl-[12px] pr-[12px] pt-[12px] pb-[12px] w-full focus:border-[#3A98BB] focus:border-2 focus:outline-none bg-transparent text-[12px] mb-8"
-            placeholder="Organization that issued/awarded"
-          />
-        </div>
-
-        {/* Upload Certificate (Optional) */}
-        <div className="mb-8">
+      
+        <Form className="w-full" validationBehavior="native" onSubmit={onSubmit}>
+        <div className='w-full'>
+      <Input
+        errorMessage="Please enter a valid skills"
+        label="Name of Awards/Certificate"
+        labelPlacement="outside"
+        name="name"
+        placeholder="Eg Best Illustrator Award"
+        type="name"
+        className='w-full  rounded-[8px]'
+      />
+      </div>
+      <div className='w-full mt-4'>
+      <Input
+        errorMessage="Please enter a valid skills"
+        label="Awarded/Issued by"
+        labelPlacement="outside"
+        name="name"
+        placeholder="Organization that issued/awarded"
+        type="name"
+        className='w-full  rounded-[8px]'
+      />
+      </div>
+      <div className="mt-4 w-full">
           <label className="block text-[12px] font-medium mb-2 text-[#444444]">Upload Certificate/Award (Optional)</label>
           <div className="border border-dashed border-gray-300 rounded-md p-6 h-40 flex items-center justify-center cursor-pointer">
             <input
@@ -66,24 +72,19 @@ const Awards = () => {
             </label>
           </div>
         </div>
-
-        {/* Action Buttons */}
-        <div className="flex justify-end gap-8 text-[12px] mt-6">
+        <div className="flex justify-end gap-8  mt-6 font-bold w-full">
           <button
-            className=" text-gray-600 py-2 px-4 rounded-full"
+            className=" text-[#3A98BB] py-2 px-4 rounded-full"
             onClick={() => console.log('Skipped')}
           >
             Skip
           </button>
-          <Link href={"/jobpost"}>
-          <button
-            onClick={handleAwardSubmit} // Call form submission on button click
-            className="bg-[#E8E8E8] text-[#BFBFBF] font-semibold pl-[24px] pr-[24px] pt-[16px] pb-[16px] rounded-full w-32"
-          >
-            Submit
-          </button>
-          </Link>
+          <CustomButton text='Submit' className="w-32" href="/jobpost" />
         </div>
+        </Form>
+
+
+        {/* Action Buttons */}
       </div>
     </div>
   );

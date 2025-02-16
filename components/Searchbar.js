@@ -1,17 +1,29 @@
+'use client'
+import { Input } from '@heroui/react';
 import Image from 'next/image';
 import React from 'react';
+import { SearchIcon } from './SearchIcon';
 
-const SearchBar = ({ placeholder = 'Search Jobs...' }) => {
+
+const SearchBar = () => {
   return (
-    <div className="w-[930pxl max-w-md mx-auto flex items-center bg-gray-100 border border-gray-300 rounded-full px-4 py-2">
+    <div className="w-full ml-40 rounded-full px-4 py-2">
       {/* Custom Search Icon */}
-      <Image src={"/dev-images/Search.png"} alt="Search Icon" className="w-5 h-5 mr-2" width={25} height={25} />
+     
       {/* Input Field */}
-      <input
-        type="text"
-        placeholder={placeholder}
-        className="w-[930px]  bg-transparent focus:outline-none text-gray-700"
-      />
+      <Input
+          classNames={{
+            base: "w-[600px] h-10",
+            mainWrapper: "h-full",
+            input: "text-small",
+            inputWrapper:
+              "w-full h-full font-normal text-default-500 bg-default-400/20 dark:bg-default-500/20 rounded-full px-6 py-6",
+          }}
+          placeholder="Search jobs..."
+          size="sm"
+          startContent={<SearchIcon size={18} />}
+          type="search"
+        />
     </div>
   );
 };

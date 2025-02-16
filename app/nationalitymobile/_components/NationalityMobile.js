@@ -114,7 +114,7 @@ const NationalityMobile = () => {
         <div className="flex space-x-[39px] mt-6 w-[306px] h-[52px]">
           <button className="text-[16px] text-[#3A98BB]">Skip</button>
           <Link href={"/portfoliomobile"}>
-            <button className="bg-[#E8E8E8] text-[#444444] pl-[24px] pr-[24px] pt-[16px] pb-[16px] rounded-full w-[128px] h-[52px] text-[16px]">
+            <button className="bg-[#E8E8E8] bg-[radial-gradient(circle,#FFFFFF,#CCE7F2)] text-[#0A4A66] pl-[24px] pr-[24px] pt-[16px] pb-[16px] rounded-full w-[128px] h-[52px] text-[16px]">
               Next
             </button>
           </Link>
