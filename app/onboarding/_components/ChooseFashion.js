@@ -17,7 +17,7 @@ const ChooseFashion = () => {
           height={40}
         />
       </div>
-      <h1 className="text-center text-[32px] md:text-xl font-semibold mt-3">
+      <h1 className="text-center text-2xl md:text-xl font-bold mt-3">
         Sign up as a Fashion Artist or a Fashion Brand/Designer
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-8">

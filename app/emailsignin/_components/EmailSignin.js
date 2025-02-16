@@ -30,36 +30,44 @@ const EmailSignin = () => {
     </div>
 
     {/* Right section for Email Sign In */}
-    <div
-  className="flex flex-col justify-center items-center bg-white shadow-[0px_4px_16px_0px_rgba(0,0,0,0.15)] pl-[32px] pr-[32px] pt-[45px] pb-[45px] sm:mt-0 mt-[30px]"
-  style={{  borderRadius: '16px' }}
+{/* Back Arrow - Positioned Outside Only on Mobile */}
+{/* Mobile View: Logo & Back Arrow Outside */}
+<div className="sm:hidden flex justify-center mt-4">
+  <Image src="/dev-images/logo.png" alt="Logo" width={60} height={60} />
+</div>
+
+<div className="sm:hidden absolute left-4 top-4">
+  <Image src="/dev-images/ArrowLeft.png" alt="Back Arrow" width={24} height={24} className="cursor-pointer" />
+</div>
+
+{/* Desktop View: Everything Inside the Container */}
+<div
+  className="relative flex flex-col justify-center items-center bg-white shadow-[0px_4px_16px_0px_rgba(0,0,0,0.15)] pl-[32px] pr-[32px] pt-[45px] pb-[45px] sm:mt-0 mt-[30px] w-80 lg:w-96"
+  style={{ borderRadius: '16px' }}
 >
-  {/* Logo & Back Arrow at the Top */}
-  <div className="flex items-center w-full mb-4">
-    <Image
-      src="/dev-images/ArrowLeft.png"
-      alt="Back Arrow"
-      width={24}
-      height={24}
-      className="cursor-pointer mt-[-30px]"
-    />
-    <Image
-      src="/dev-images/logo.png"
-      alt="Logo"
-      width={60}
-      height={60}
-      className='mx-auto'
-    />
+  {/* Desktop: Back Arrow at the Far Left */}
+  <div className="hidden sm:flex w-full">
+    <Image src="/dev-images/ArrowLeft.png" alt="Back Arrow" width={24} height={24} className="cursor-pointer" />
   </div>
 
-  {/* Welcome Text */}
-  <h1 className="text-xl font-semibold text-[#444444] text-center">
+  {/* Desktop: Logo Centered */}
+  <div className="hidden sm:flex items-center w-full justify-center mb-4">
+    <Image src="/dev-images/logo.png" alt="Logo" width={60} height={60} />
+  </div>
+
+  {/* Desktop: Welcome Text Centered */}
+  <h1 className="hidden sm:block text-xl font-semibold text-[#444444] text-center">
     Welcome back
   </h1>
 
-  <div className="w-full p-6">
+  {/* Mobile: Welcome Text */}
+  <h1 className="text-xl font-semibold text-[#444444] text-center block sm:hidden">
+    Welcome to Suuave
+  </h1>
+
+  <div className="w-full">
     {/* Input Fields */}
-    <div className="relative mb-8">
+    <div className="relative mt-4">
       <label className="absolute left-3 -mt-3 text-gray-500 text-sm transition-all duration-200 transform origin-left">
         Email
       </label>
@@ -74,7 +82,7 @@ const EmailSignin = () => {
     </div>
 
     {/* Password Input */}
-    <div className="relative mb-2">
+    <div className="relative mt-8">
       <label className="absolute left-3 -mt-3 text-gray-500 text-sm transition-all duration-200 transform origin-left">
         Password
       </label>
@@ -85,7 +93,7 @@ const EmailSignin = () => {
         className="w-full h-12 border border-gray-300 rounded-md pl-[8px] pr-[8px] pt-[12px] pb-[12px] focus:outline-none focus:border-[#9FD2E5] placeholder-transparent"
         placeholder=" "
       />
-      <Image src={"/dev-images/Lock.png"} alt='lock' className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" width={20} height={20} />
+      <Image src={"/dev-images/Lock.png"} alt="lock" className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" width={20} height={20} />
       {showPassword ? (
         <IoEyeOffOutline
           className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 cursor-pointer"
@@ -110,7 +118,7 @@ const EmailSignin = () => {
 
     {/* Login Button */}
     <div className="flex justify-center">
-      <CustomButton text='Login' className="w-96" href='/fashionartist' />
+      <CustomButton text="Login" className="w-96" href="/fashionartist" />
     </div>
 
     {/* Don't have an account prompt */}
@@ -122,6 +130,8 @@ const EmailSignin = () => {
     </p>
   </div>
 </div>
+
+
 
   </div>
 </div>

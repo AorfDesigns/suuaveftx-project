@@ -10,10 +10,10 @@ const FashionArtist = () => {
 <div className="flex items-start justify-between h-screen">
   {/* Left section with text and icons */}
   <div className="p-4 sm:p-0 self-start">
-    <div className="flex flex-col max-w-md border border-gray-400 shadow-md rounded-[8px] sm:shadow-none sm:border-none">
+    <div className="flex flex-col max-w-md border border-gray-400 shadow-md rounded-[8px] sm:shadow-none sm:border-none pl-4 pr-4 pt-[24px] pb-[40px]">
       <h1 className="text-2xl font-bold">Hi Kate,</h1>
       <p className=" text-gray-600 font-bold text-2xl">
-        To begin, let&apos;s take a moment to <br /> complete your profile setup.
+        To begin, let&apos;s take a moment to complete your <br/> profile set-up.
       </p>
 
       {/* Complete Profile Setup */}
@@ -43,7 +43,7 @@ const FashionArtist = () => {
 
       {/* Continue Button */}
       <div className="mt-8">
-        <CustomButton text="continue" href="/personalprofile" className="w-32" />
+        <CustomButton text="continue" href="/personalprofile" className="lg:w-32 w-full" />
       </div>
     </div>
   </div>

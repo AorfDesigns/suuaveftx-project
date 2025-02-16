@@ -22,7 +22,7 @@ const DoneMobile = () => {
 
       {/* View Jobs Button */}
       <div className="w-full flex justify-center">
-        <button className="bg-[#CCE7F2] text-[#444444] px-6 py-3  w-full rounded-full text-sm">
+        <button className="bg-[radial-gradient(circle,#FFFFFF,#CCE7F2)] text-[#0A4A66] px-6 py-3  w-full rounded-full text-sm">
           View Jobs
         </button>
       </div>

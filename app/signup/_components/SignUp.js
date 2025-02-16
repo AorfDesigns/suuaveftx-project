@@ -36,14 +36,25 @@ export default function SignUpForm() {
       className="rounded-lg object-contain"
     />
   </div>
+  <div className="lg:hidden flex justify-center items-center">
+    <Image
+      src="/dev-images/logo.png"
+      alt="Background Image"
+      layout="intrinsic"
+      width={70}
+      height={60}
+      className="rounded-lg object-contain"
+    />
+  </div>
+  
 
       {/* Right Section */}
-      <div className="p-6 h-auto flex flex-col justify-center bg-[#FAFAFA] shadow-md rounded-2xl mb-20">
+      <div className="p-6 h-auto flex flex-col justify-center bg-[#FAFAFA] shadow-md rounded-2xl mt-8">
         <h1 className="text-3xl font-semibold text-gray-700 mt-[42px] text-center">
           Create New Account
         </h1>
 
-        <button className="w-full flex items-center justify-center gap-2 text-base font-medium text-gray-600 border border-gray-300 rounded-lg px-4 py-2 mt-8 hover:bg-gray-100">
+        <button className="w-full lg:w-full flex items-center justify-center gap-2 text-base font-medium text-gray-600 border border-gray-300 rounded-lg px-4 py-2 mt-8 hover:bg-gray-100">
           <Image
             src="/dev-images/Google.png"
             alt="Google Logo"
@@ -69,7 +80,7 @@ export default function SignUpForm() {
         name="firstname"
         placeholder="First Name"
         type="name"
-        className="w-64 border-1 border-[#D1D1D1] rounded-[8px]"
+        className="w-44 lg:w-64 border-1 border-[#D1D1D1] rounded-[8px]"
       />
        <Input
         isRequired
@@ -79,7 +90,7 @@ export default function SignUpForm() {
         name="firstname"
         placeholder="Last Name"
         type="name"
-        className="w-64 border-1 border-[#D1D1D1] rounded-[8px]"
+        className="w-44 lg:w-64  border-1 border-[#D1D1D1] rounded-[8px]"
       />
     </div>
     <div className="mt-4 w-full">
@@ -118,8 +129,8 @@ export default function SignUpForm() {
     className="w-full block border border-[#D1D1D1] rounded-[8px] "
   />
 </div>
-<p className="text-sm text-gray-500 mt-1 ml-2">Password must be at least 8 characters</p>
- <div className="mt-4">
+<p className="text-sm text-gray-500 mt-1 ml-2">Password must contain at least 8 characters</p>
+ <div className="mt-4 flex items-start gap-2 text-left">
  <Checkbox
           isRequired
           classNames={{

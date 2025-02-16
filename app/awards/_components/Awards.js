@@ -79,7 +79,7 @@ const Awards = () => {
           >
             Skip
           </button>
-          <CustomButton text='Submit' className="w-32" href='/jobpost' />
+          <CustomButton text='Submit' className="w-32" href="/jobpost" />
         </div>
         </Form>
 
