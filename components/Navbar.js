@@ -6,17 +6,24 @@ import {
   NavbarContent,
   NavbarItem,
   Image,
+  NavbarMenuToggle,
+  NavbarMenuItem,
+  NavbarMenu,
 } from "@heroui/react";
 import React from "react";
 import CustomButton from "./CustomButton";
 
 const CustomNavbar = () => {
   const [textStyle, setTextStyle] = React.useState("text-white");
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+  const menuItems = ["Blogs", "How it works", "FAQs", "About Us"];
+
   return (
     <Navbar
       shouldHideOnScroll
-      className="w-full items-center justify-between px-4 font-satoshi"
-      classNames={{ wrapper: "max-w-[1700px] mx-auto" }}
+      className="w-full items-center justify-between lg:px-4 px-0 font-satoshi"
+      classNames={{ wrapper: "max-w-[1700px] mx-auto px-3" }}
       onScrollPositionChange={(position) => {
         if (position > 600) {
           setTextStyle("text-yellow-500");
@@ -24,15 +31,20 @@ const CustomNavbar = () => {
           setTextStyle("text-white");
         }
       }}
+      onMenuOpenChange={setIsMenuOpen}
     >
       <NavbarBrand>
         <Image
           src="/dev-images/navLogo.png"
           alt="Logo"
-          className="w-44 py-4" // Reduced space between the logo and form
+          className="lg:w-44 py-4 w-32" // Reduced space between the logo and form
         />
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-14 " justify="center">
+        <NavbarMenuToggle
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          className="sm:hidden"
+        />
         <NavbarItem>
           <Link href="#" className={`${textStyle} transition duration-300`}>
             Blogs
@@ -54,16 +66,41 @@ const CustomNavbar = () => {
           </Link>
         </NavbarItem>
       </NavbarContent>
-      <NavbarContent justify="end" className="space-x-8">
+      <NavbarContent justify="end" className="space">
         <NavbarItem className="hidden lg:flex">
           <Link href="#" className={`${textStyle} transition duration-300`}>
             Login
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <CustomButton />
+          <CustomButton className="hidden lg:flex" />
         </NavbarItem>
+        <Link className="lg:hidden text-white">Login</Link>
+        <NavbarMenuToggle
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          className={`sm:hidden text-white font-bold text-lg size-6`}
+        />
       </NavbarContent>
+      <NavbarMenu>
+        {menuItems.map((item, index) => (
+          <NavbarMenuItem key={`${item}-${index}`}>
+            <Link
+              className="w-full"
+              color={
+                index === 2
+                  ? "primary"
+                  : index === menuItems.length - 1
+                  ? "danger"
+                  : "foreground"
+              }
+              href="#"
+              size="lg"
+            >
+              {item}
+            </Link>
+          </NavbarMenuItem>
+        ))}
+      </NavbarMenu>
     </Navbar>
   );
 };

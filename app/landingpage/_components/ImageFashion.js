@@ -16,17 +16,17 @@ import { ScrollParallax } from "react-just-parallax";
 
 const ImageFashion = () => {
   return (
-    <div className="px-14 bg-customBgBlack min-h-60 py-10 grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-4 -z-30">
-      <div className="col-span-2 w-[56%]">
-        <p className="text-customWhiteBgText font-medium text-2xl">
+    <div className="lg:px-14  px-4 bg-customBgBlack min-h-60 py-10 grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] lg:gap-4 gap-0 -z-30">
+      <div className="col-span-2 lg:w-[56%] w-full">
+        <p className="text-customWhiteBgText font-medium lg:text-2xl text-lg">
           FOR FASHION ARTISTS
         </p>
-        <p className="text-customWhite font-medium text-[50px] mt-3 leading-[57px]">
+        <p className="text-customWhite font-normal lg:font-medium lg:text-[50px] text-[28px] mt-0 lg:mt-3 lg:leading-[57px]">
           Get global exposure and monetize your creativity.
         </p>
       </div>
       <div>
-        <div className="grid grid-cols-2 gap-6 gap-x-20 mb-16 w-[87%] mt-8">
+        <div className="grid lg:grid-cols-2 grid-cols-1 gap-6 gap-x-20 mb-16 lg:w-[87%] mt-8 w-full">
           {fashionSection.map((group, index) => (
             <FashionArtistGroup
               key={index}
@@ -36,7 +36,7 @@ const ImageFashion = () => {
             />
           ))}
         </div>
-        <p className=" text-customWhiteBgText font-medium text-3xl">
+        <p className=" text-customWhiteBgText font-medium lg:text-3xl text-xl">
           Begin your journey to success
         </p>
         <div className="flex items-center gap-2 mt-4 cursor-pointer text-customWhiteBgText font-medium hover:underline">
@@ -47,7 +47,7 @@ const ImageFashion = () => {
 
       {/* Right section */}
 
-      <div className="relative flex flex-col">
+      <div className="relative  flex-col hidden lg:flex">
         <ScrollParallax isAbsolutelyPositioned strength={0.1} zIndex={10}>
           <Card className="w-fit absolute  -left-28 -top-6">
             <CardHeader className="flex flex-col gap-2 items-start">
@@ -82,7 +82,11 @@ const ImageFashion = () => {
             </CardFooter>
           </Card>
         </ScrollParallax>
-        <Image src="/dev-images/womanDesigning.png" className=" -z-0" alt="woman Designing" />
+        <Image
+          src="/dev-images/womanDesigning.png"
+          className=" -z-0"
+          alt="woman Designing"
+        />
         {/* second floting card */}
         <ScrollParallax isAbsolutelyPositioned strength={0.07} zIndex={10}>
           <Card className="w-fit absolute z-10  -left-12 bottom-8 ">
