@@ -17,10 +17,12 @@ export default function Home() {
       <HowItWorks />
 
       <ImageFashion />
+      <div className="h-11 bg-white" />
       <ImageDesigners />
 
       <ExploreComponent />
       <Banner />
+      <div className="h-11 bg-white" />
     </div>
   );
 }

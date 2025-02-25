@@ -4,10 +4,10 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#223B44] text-white px-14 py-12">
+    <footer className="bg-[#223B44] text-white lg:px-14 px-4 py-12">
       <div className="  grid grid-cols-1 lg:grid-cols-[1.6fr_1fr_1fr_1fr] gap-8 items-start">
         {/* First Column */}
-        <div className="flex flex-col gap-4">
+        <div className=" flex-col gap-4 hidden lg:flex">
           <Image
             src={"/dev-images/navLogo.png"}
             alt="logocombo"
@@ -23,10 +23,10 @@ const Footer = () => {
 
         {/* Second Column */}
         <div className="">
-          <h2 className="text-lg font-normal mb-4 border-b-1 border-white pb-1 w-fit">
+          <h2 className="text-lg font-normal mb-4 border-b-1 border-white pb-1 lg:w-fit">
             OUR COMPANY
           </h2>
-          <ul className="space-y-2 text-sm font-thin">
+          <ul className="space-y-2 text-sm font-thin text-[#C8C8C8]">
             <li>Contact Us</li>
             <li>About Us</li>
             <li>Help and Support</li>
@@ -35,10 +35,10 @@ const Footer = () => {
 
         {/* Third Column */}
         <div className="">
-          <h2 className="text-lg font-normal mb-4 border-b-1 border-white pb-1 w-fit">
+          <h2 className="text-lg font-normal mb-4 border-b-1 border-white pb-1 lg:w-fit">
             IMPORTANT LINKS
           </h2>
-          <ul className="space-y-2 text-sm font-thin">
+          <ul className="space-y-2 text-sm font-thin text-[#C8C8C8]">
             <li>Job Posts</li>
             <li>Explore Talents</li>
             <li>How It Works</li>
@@ -47,10 +47,10 @@ const Footer = () => {
 
         {/* Fourth Column */}
         <div className="">
-          <h2 className="text-lg font-normal mb-4 border-b-1 border-white pb-1 w-fit">
+          <h2 className="text-lg font-normal mb-4 border-b-1 border-white pb-1 lg:w-fit">
             POLICIES
           </h2>
-          <ul className="space-y-2 text-sm font-thin">
+          <ul className="space-y-2 text-sm font-thin text-[#C8C8C8]">
             <li>Terms & Conditions</li>
             <li>Privacy Policy</li>
             <li>Collaboration Policy</li>
@@ -59,12 +59,12 @@ const Footer = () => {
       </div>
 
       {/* Social Media Section */}
-      <div className="mt-12 text-center">
-        <h2 className="text-lg font-medium mb-4 border-b-2 border-white pb-1 w-full text-center">
+      <div className="mt-12 lg:text-center">
+        <h2 className="text-lg font-medium mb-4 border-b-2 border-white pb-1 w-full lg:text-center">
           OUR SOCIALS
         </h2>
 
-        <div className="flex justify-center items-center gap-6 mt-4">
+        <div className="flex lg:justify-center lg:items-center gap-6 mt-4">
           <Button
             isIconOnly
             as={Link}
