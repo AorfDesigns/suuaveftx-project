@@ -49,7 +49,7 @@ const License = () => {
                     <div className="flex gap-16  whitespace-nowrap">
     {[...Array(5)].map((_, index) => (
         <div key={index} className="border-2 border-[#d1d1d1] rounded-lg p-4 flex flex-col items-center justify-center gap-2 cursor-pointer w-[110px] h-[110px]">
-            <Image size={24} className="text-gray-500" />
+            <Image size={24} className="text-gray-500" alt="image-upload" />
         </div>
     ))}
 </div>
