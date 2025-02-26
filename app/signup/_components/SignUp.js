@@ -148,7 +148,7 @@ export default function SignUpForm() {
 
  </div>
  <div className="w-96 flex justify-center items-center mt-4 mx-auto">
-  <CustomButton text="Create Account" href="/otp" className="w-96" />
+  <CustomButton text="Create Account"  className="w-96" href={"/otp"} />
 </div>
 
 

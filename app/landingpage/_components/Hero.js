@@ -48,7 +48,7 @@ const HeroSection = () => {
             culture and expertise to create groundbreaking culturally-rich
             designs.
           </p>
-          <CustomButton className="ml-14 w-40 text-lg h-[52px]" />
+          <CustomButton className="ml-14 w-40 text-lg h-[52px]" href={"/onboarding"} />
         </div>
         <div className="pr-14 py-14 relative">
           <ScrollParallax isAbsolutelyPositioned strength={0.2} zIndex={30}>
