@@ -87,7 +87,7 @@ const SendProposal = (props) => {
 
         <div className="mt-8 relative flex flex-col">
         <label className="block text-sm font-bold text-gray-700 mb-2">
-        Accept Client's Price
+        Accept Client&apos;s Price
       </label>
       <div className='mt-2'>
       <RadioGroup value={selected} onValueChange={handleSelect}>

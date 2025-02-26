@@ -41,7 +41,7 @@ Key Responsibilities: <br/>
 Collaborate with the fashion design team to create detailed illustrations of African attire, including dresses, tunics, and traditional garments.<br/>
 Develop sketches and renderings that capture the essence of African culture and heritage.<br/>
 Interpret design briefs to create visually appealing and accurate illustrations.<br/>
-Incorporate traditional African patterns, motifs, and fabrics into designs while staying true to the brand's aesthetic.<br/>
+Incorporate traditional African patterns, motifs, and fabrics into designs while staying true to the brand`&apposs aesthetic.<br/>
 Work closely with the design team to ensure illustrations align with the overall vision of the collection.<br/>
 Make revisions to designs based on feedback and ensure final illustrations are production-ready.<br/>
 Stay updated on the latest trends in African fashion and integrate them into your work. <br/>
