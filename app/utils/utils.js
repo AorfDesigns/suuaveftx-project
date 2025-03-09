@@ -47,7 +47,7 @@ export const fashionSection = [
   {
     title: "Apply For Jobs",
     text: "Browse job postings from top designers/brands seeking African fashion expertise and apply for projects that match your skills and style.",
-    image: "/dev-images/apply.png",
+    image: "/dev-images/Apply.png",
   },
   {
     title: "Publish Your Designs For Licensing",
@@ -57,7 +57,7 @@ export const fashionSection = [
   {
     title: "Get Paid",
     text: "Your payment is automatically processed after a satisfactory work done and when your designs are licensed.",
-    image: "/dev-images/cash.png",
+    image: "/dev-images/Cash.png",
   },
 ];
 
