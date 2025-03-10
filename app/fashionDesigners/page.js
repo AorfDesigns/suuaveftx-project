@@ -1,14 +1,14 @@
 "use client";
 
 import { Alert, Chip, Input, Tab, Tabs } from "@heroui/react";
-import React from "react";
+import React, { useState } from "react";
 import { IoSearchOutline } from "react-icons/io5";
 // import imageUrl from "/dev-images/fashionImg1.png";
 import FashionDesignersCard from "./_components/FashionDesignersCard";
 import Footer from "../landingpage/_components/Footer";
 
 const page = () => {
-  const [isVisible, setIsVisible] = React.useState(true);
+  const [isVisible, setIsVisible] = useState(true);
 
   const cardsData = [
     {
