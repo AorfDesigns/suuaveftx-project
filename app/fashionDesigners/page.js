@@ -8,7 +8,7 @@ import FashionDesignersCard from "./_components/FashionDesignersCard";
 import Footer from "../landingpage/_components/Footer";
 
 const page = () => {
-  const [isVisible, setIsVisible] = useState(true);
+  // const [isVisible, setIsVisible] = useState(true);
 
   const cardsData = [
     {
@@ -125,7 +125,7 @@ const page = () => {
     <div className=" lg:px-14 px-4 pt-7 font-satoshi">
       <Alert
         // color="secondary"
-        isVisible={isVisible}
+        // isVisible={isVisible}
         title={
           <p className="font-normal">
             You have{" "}
@@ -135,7 +135,7 @@ const page = () => {
           </p>
         }
         variant="faded"
-        onClose={() => setIsVisible(false)}
+        // onClose={() => setIsVisible(false)}
         closeButtonProps={{
           className: "place-self-center items-center",
         }}
