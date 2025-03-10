@@ -18,7 +18,7 @@ const HeroSection = () => {
       <BackgroundBeams />
       <div className="lg:grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-4 min-h-[94vh] bg-customNavBg pb-8 flex flex-col">
         <div className="col-span-2 h-6"></div>
-        <div className="space-y-8 place-self-center  w-full">
+        <div className="space-y-6 place-self-center  w-full">
           <div className="grid lg:grid-cols-2 grid-rows-2 grid-cols-[0.7fr_1fr] text-white lg:w-fit lg:ml-4 ml-0  w-full ">
             <Image
               src="/dev-images/userImages.png" // Replace with your mobile image path
@@ -51,14 +51,14 @@ const HeroSection = () => {
           <CustomButton className="ml-14 w-40 text-lg h-[52px]" href={"/onboarding"} />
         </div>
         <div className="lg:pr-14 py-14 relative pr-5 px-5 lg:px-0 lg:mt-0 mt-7">
-          <ScrollParallax isAbsolutelyPositioned strength={0.2} zIndex={30}>
+          <ScrollParallax isAbsolutelyPositioned strength={0.1} zIndex={30}>
             <HeroSlimCard
               text="Streamlined Collaboration"
               svg={<SvgCollabIcon className="size-5" />}
               className="absolute top-12 lg:left-0 right-6"
             />
           </ScrollParallax>
-          <ScrollParallax isAbsolutelyPositioned strength={0.44} zIndex={30}>
+          <ScrollParallax isAbsolutelyPositioned strength={0.3} zIndex={30}>
             <HeroSlimCard
               text="Community Development"
               svg={<SvgCUserIcon className="size-5" />}
@@ -84,7 +84,7 @@ const HeroSection = () => {
               className="absolute bottom-4 hidden lg:flex"
             />
           </ScrollParallax>
-          <ScrollParallax isAbsolutelyPositioned strength={0.11} zIndex={30}>
+          <ScrollParallax isAbsolutelyPositioned strength={0.09} zIndex={30}>
             <HeroSlimCard
               text="Secure Payment"
               svg={<SvgProtectIcon className="size-5" />}

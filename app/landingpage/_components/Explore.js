@@ -49,10 +49,26 @@ const ExploreComponent = () => {
       </div>
 
       <div className="lg:hidden grid grid-cols-2 gap-3 mt-10">
-        <Image src="/dev-images/exploreMobileImg1.png" radius="none" />
-        <Image src="/dev-images/exploreMobileImg2.png" radius="none" />
-        <Image src="/dev-images/exploreMobileImg3.png" radius="none" />
-        <Image src="/dev-images/exploreMobileImg4.png" radius="none" />
+        <Image
+          alt="img"
+          src="/dev-images/exploreMobileImg1.png"
+          radius="none"
+        />
+        <Image
+          alt="img"
+          src="/dev-images/exploreMobileImg2.png"
+          radius="none"
+        />
+        <Image
+          alt="img"
+          src="/dev-images/exploreMobileImg3.png"
+          radius="none"
+        />
+        <Image
+          alt="img"
+          src="/dev-images/exploreMobileImg4.png"
+          radius="none"
+        />
         <div className="col-span-2 mt-6 items-center flex flex-col">
           <p className="text-center text-[#727272]">
             All designs are licensable and available for collaborations.

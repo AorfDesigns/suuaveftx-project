@@ -76,3 +76,17 @@ body {
 .break-text {
   white-space: pre-line;
 }
+
+.line-clamp-2-css {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media (max-width: 640px) {
+  /* Tailwind's sm breakpoint is 640px */
+  .line-clamp-2-css {
+    display: none;
+  }
+}
