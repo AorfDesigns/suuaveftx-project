@@ -1,6 +1,9 @@
 'use client';
 import Link from 'next/link';
 import React, { useState } from 'react';
+import {Form, Input, Select, SelectItem,} from "@heroui/react";
+import {Switch} from "@heroui/react";
+import CustomButton from '../../../components/CustomButton';
 
 const Skills = ({ setActiveProfessionalLink }) => {
   const [skill, setSkill] = useState('');
@@ -62,55 +65,60 @@ const Skills = ({ setActiveProfessionalLink }) => {
     setUploadedFile(file);
     console.log('Uploaded file:', file);
   };
-
+  const onSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const data = Object.fromEntries(formData.entries());
+    setSubmitted(data);
+  };
 
   return (
     <div className="flex justify-center items-center min-h-screen">
-      <div className="bg-[#FAFAFA] p-8 w-[1083px] border border-1 border-[#DEDEDE] rounded-lg">
+      <div className="bg-[#FAFAFA] p-8 w-[1083px]  border-1 border-[#DEDEDE] rounded-lg">
         <h2 className="text-[16px] font-semibold mb-2 text-[#3A98BB]">Professional Details</h2>
         <p className="text-[#727272] mb-8 text-[12px]">Add any related information</p>
 
         {/* Skill input field */}
-        <div className="mb-2">
-          <label className="block text-[12px] font-medium mb-1 text-[#444444]">Skills</label>
-          <input
-            type="text"
-            className="border border-gray-300 rounded-md pl-[12px] pr-[25px] pt-[12px] pb-[12px] w-full text-[12px] focus:border-[#3A98BB] focus:border-2 focus:outline-none bg-transparent mb-[42px]"
-            placeholder="Eg illustrator"
-            value={skill}
-            onChange={handleSkillChange}
-          />
-        </div>
-
-        {/* Company/Brand Name */}
-        <div className="mb-6">
-          <label className="block text-[12px] font-medium mb-1 text-[#444444]">Company/Brand Name (Optional)</label>
-          <input
-            type="text"
-            value={company}
-            onChange={(e) => setCompany(e.target.value)}
-            className="border border-gray-300 rounded-md pl-[8px] pr-[16px] pt-[12px] pb-[12px] w-full focus:border-[#3A98BB] focus:border-2 focus:outline-none bg-transparent text-[12px] mb-[42px]"
-            placeholder="Enter Company Name"
-          />
-        </div>
-
-        {/* Portfolio Link */}
-        <div className="mb-6">
-          <label className="block text-[12px] font-medium mb-1 text-[#444444]">Link to Your Portfolio</label>
-          <input
-            type="url"
-            value={portfolioLink}
-            onChange={(e) => setPortfolioLink(e.target.value)}
-            className="border border-gray-300 rounded-md pl-[12px] pr-[25px] pt-[12px] pb-[12px] w-full text-[12px] focus:border-[#3A98BB] focus:border-2 focus:outline-none bg-transparent  mb-[42px]"
-            placeholder="Enter portfolio link"
-          />
-        </div>
-
-        {/* Portfolio Upload */}
-        <div className="mb-[42px]">
-          <label className="block text-[12px] font-medium mb-1 text-[#444444]">Sample Projects</label>
-          <div className="border border-gray-300 rounded-md p-4 h-40 flex items-center justify-center cursor-pointer">
-            <input
+        <Form className="w-full" validationBehavior="native" onSubmit={onSubmit}>
+          <div className='w-full'>
+      <Input
+        isRequired
+        errorMessage="Please enter a valid skills"
+        label="Skills"
+        labelPlacement="outside"
+        name="name"
+        placeholder="Eg illustrator"
+        type="name"
+        className='w-full  rounded-[8px]'
+      />
+      </div>
+      <div className='w-full mt-4'>
+      <Input
+        errorMessage="Please enter a valid company name"
+        label="Company/brand Name(Optional)"
+        labelPlacement="outside"
+        name="name"
+        placeholder="Enter company name"
+        type="name"
+        className='w-full  rounded-[8px]'
+      />
+      </div>
+      <div className='w-full mt-4'>
+      <Input
+      isRequired
+        errorMessage="Please enter a valid company name"
+        label="Link to your portfolio"
+        labelPlacement="outside"
+        name="name"
+        placeholder="Enter portfolio link"
+        type="name"
+        className='w-full  rounded-[8px]'
+      />
+      </div>
+      <div className="mt-4 w-full">
+          <label className="block text-[12px] font-medium mb-1 text-[#444444]">Portfolio</label>
+          <div className="border border-gray-300 rounded-md p-4 h-40 flex items-center justify-center cursor-pointer w-full">
+            <Input
               type="file"
               className="hidden"
               id="portfolioUpload"
@@ -127,111 +135,37 @@ const Skills = ({ setActiveProfessionalLink }) => {
             <p className="text-sm text-gray-600 mt-2">Uploaded: {uploadedFile.name}</p>
           )}
         </div>
-
-        {/* Availability Section */}
-        <div className="mb-6">
-  <label className="block text-[12px] font-medium mb-1 text-[#444444]">
-    Availability <span className="text-red-500">*</span>
-  </label>
-  <div className="flex items-center mb-2">
-    {/* Dropdown for Day Selection */}
-    <div className="relative flex items-center w-full max-w-[300px]">
-      <button
-        className="p-2 flex items-center text-[12px]  w-full justify-between"
-        onClick={toggleDropdown}
-        aria-expanded={isDropdownOpen}
-        aria-haspopup="listbox"
-      >
-        <span>{availabilityDay || 'Select a Day'}</span>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-4 w-4"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d={isDropdownOpen ? 'M5 15l7-7 7 7' : 'M19 9l-7 7-7-7'}
-          />
-        </svg>
-      </button>
-      {isDropdownOpen && (
-        <ul
-          className="absolute z-10 bg-white shadow-md mt-2 w-[300px] rounded-md max-h-40 overflow-y-auto text-[12px] border border-gray-300"
-          role="listbox"
-          style={{ top: '100%' }} /* Ensures it appears directly below */
-        >
-          {['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'].map((day) => (
-            <li
-              key={day}
-              className="cursor-pointer hover:bg-gray-100 px-4 py-2 transition-colors duration-200"
-              onClick={() => selectDay(day)}
-              role="option"
-              aria-selected={availabilityDay === day}
-            >
-              {day}
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
-
-    {/* Availability Toggle */}
-    <label className="relative inline-flex items-center cursor-pointer ml-4">
-      <input
-        type="checkbox"
-        className="sr-only peer"
-        checked={isAvailable}
-        onChange={() => setIsAvailable(!isAvailable)}
-      />
-      <div
-        className={`w-11 h-6 rounded-full transition-colors duration-200 ease-in-out ${
-          isAvailable ? 'bg-green-500' : 'bg-gray-300'
-        }`}
-      >
-        <span
-          className={`absolute left-0.5 top-0.5 w-5 h-5 rounded-full bg-white transition-transform duration-200 ease-in-out ${
-            isAvailable ? 'transform translate-x-5' : ''
-          }`}
-        ></span>
-      </div>
-      <span className="ml-2 text-xs text-gray-600">
-        <svg
-          width="12"
-          height="12"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle
-            cx="6"
-            cy="6"
-            r="6"
-            fill={isAvailable ? 'green' : 'gray'}
-          />
-        </svg>
-      </span>
-    </label>
+        <div className="mt-4 flex items-center gap-4">
+  <Select
+    isRequired
+    label="Availability"
+    labelPlacement="outside"
+    name="availability"
+    placeholder="Monday"
+    className="w-96"
+  >
+    <SelectItem key="tue" value="ar">Tuesday</SelectItem>
+    <SelectItem key="wed" value="us">Wednessday</SelectItem>
+    <SelectItem key="th" value="ca">Thursday</SelectItem>
+    <SelectItem key="fr" value="uk">Friday</SelectItem>
+    <SelectItem key="sa" value="au">Saturday</SelectItem>
+    <SelectItem key="su" value="au">Sunday</SelectItem>
+  </Select>
+  <div className='mt-8'>
+  <Switch defaultSelected color="success"></Switch>
   </div>
 </div>
+
+
+    </Form>
+
+       
 
 
         {/* Continue Button */}
         <div className="flex items-center gap-8 justify-end text-[12px]">
           <span className='text-[#2C7A9C] font-bold'>Skip</span>
-          <Link href={"/awards"}>
-          <button
-            className={`bg-[#E8E8E8] text-[#BFBFBF] pl-[24px] pr-[24px] pt-[16px] pb-[16px] px-4 rounded-full w-32  transition duration-300`}
-            style={{
-                width:"169px",
-                height: "52px",
-            }}
-          >
-           Continue
-          </button>
-          </Link>
+         <CustomButton text='continue' className="w-32" href='/awards' />
         </div>
       </div>
     </div>
