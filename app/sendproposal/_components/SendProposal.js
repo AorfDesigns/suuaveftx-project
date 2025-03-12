@@ -1,9 +1,9 @@
 'use client'
 import React, { useState } from 'react'
 import {Card, CardHeader, CardBody, Image, Textarea, Input, RadioGroup, Radio, cn, Select, SelectItem} from "@heroui/react";
-
 import CustomButton from '../../../components/CustomButton';
 import Link from 'next/link';
+import ModalComponent from '../../../components/Modal';
 const SendProposal = (props) => {
     const {children, ...otherProps} = props;
     const [selected, setSelected] = useState("");
@@ -147,7 +147,7 @@ const SendProposal = (props) => {
    </div>
    <div className='mt-16 flex gap-8'>
     <CustomButton text='Cancel' className="w-32 bg-[#EEEEEE]"  />
-    <CustomButton text='Send Proposal' className="w-32"  />
+    <ModalComponent />
    </div>
   </CardBody>
 </Card>
