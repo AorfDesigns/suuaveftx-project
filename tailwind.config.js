@@ -33,6 +33,7 @@ module.exports = {
         customTextBlack: "#404040",
         customTextWhite: "#EAEAEA",
         customBgBlack: "#181818",
+        customDarkBlue: "#3A98BB",
       },
     },
   },

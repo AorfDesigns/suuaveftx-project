@@ -1,5 +1,5 @@
 "use client";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import {
   Avatar,
   Button,
@@ -16,18 +16,18 @@ import {
 import React from "react";
 import { FaBookmark } from "react-icons/fa6";
 
-const UserTwitterCard = () => {
+const UserTwitterCard = ({ idx }) => {
   const [isFollowed, setIsFollowed] = React.useState(false);
 
   return (
-    <Card className="max-w-[300px] border-none bg-transparent" shadow="none">
+    <Card className="max-w-[300px] border-none  bg-transparent" shadow="none">
       <CardHeader className="justify-between">
         <div className="flex gap-3">
           <Avatar
             isBordered
             radius="full"
             size="md"
-            src="https://i.pravatar.cc/150?u=a04258114e29026702d"
+            src={`https://i.pravatar.cc/150?img=${idx}`}
           />
           <div className="flex flex-col items-start justify-center">
             <h4 className="text-small font-semibold leading-none text-default-600">
@@ -77,12 +77,13 @@ const UserTwitterCard = () => {
 
 const FashionDesignersCard = ({
   userName = "Obadea",
-  userAvatarImg = "https://i.pravatar.cc/150?img=9",
+  // userAvatarImg = "https://i.pravatar.cc/150?img=9",
   image,
   title = "product title",
   price,
   description,
   productID,
+  idx,
 }) => {
   // const goToProduct = () => {
   //   const router = useRouter(); // ✅ Add parentheses to call useRouter
@@ -90,23 +91,35 @@ const FashionDesignersCard = ({
   //   router.push(`/fashionDesigners/${productID}`);
   //   console.log("Navigating to:", productID);
   // };
+
+  // const goToProduct = () => {
+  //   if (!productID) return;
+  //   window.location.href = `/fashionDesigners/${productID}`;
+  // };
+  const router = useRouter();
   const goToProduct = () => {
     if (!productID) return;
-    window.location.href = `/fashionDesigners/${productID}`;
+    router.push(`/fashionDesigners/${productID}`);
   };
+
   return (
-    <Card isPressable className="px-0" onPress={goToProduct}>
+    <Card
+      isPressable
+      className="px-0 hover:shadow-xl"
+      onPress={goToProduct}
+      shadow="none"
+    >
       <CardHeader className="hidden lg:flex">
         <Popover showArrow placement="bottom">
           <PopoverTrigger>
             <User
-              avatarProps={{ src: userAvatarImg }}
+              avatarProps={{ src: `https://i.pravatar.cc/150?img=${idx}` }}
               name={userName}
               classNames={{ name: "font-semibold" }}
             />
           </PopoverTrigger>
           <PopoverContent className="p-1">
-            <UserTwitterCard />
+            <UserTwitterCard idx={idx} />
           </PopoverContent>
         </Popover>
       </CardHeader>

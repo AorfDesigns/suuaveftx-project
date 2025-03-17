@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  Link,
   Dropdown,
   DropdownTrigger,
   DropdownMenu,
@@ -19,6 +18,7 @@ import {
   Server,
   TagUser,
 } from "../../utils/SvgIcons";
+import Link from "next/link";
 
 export function NavLinks() {
   const icons = {
@@ -34,22 +34,22 @@ export function NavLinks() {
   };
 
   return (
-    <nav className="hidden md:flex items-center gap-9  font-semibold ">
+    <nav className="hidden md:flex items-center gap-9  font-medium ">
       <Link
         href="/designs"
-        className="text-[#1A1A1A] hover:text-[#B0B0B0] text-[14px] transition-colors"
+        className="text-[#1A1A1A] hover:text-[#B0B0B0] text-[15px] transition-colors"
       >
         Designs
       </Link>
       <Link
-        href="/my-jobs"
-        className="text-[#1A1A1A] hover:text-[#B0B0B0] text-[14px] transition-colors"
+        href="/fashionDesigners/my-job-post"
+        className="text-[#1A1A1A] hover:text-[#B0B0B0] text-[15px] transition-colors"
       >
         My Job Posts
       </Link>
       <Link
         href="/contracts"
-        className="text-[#1A1A1A] hover:text-[#B0B0B0] text-[14px] transition-colors"
+        className="text-[#1A1A1A] hover:text-[#B0B0B0] text-[15px] transition-colors"
       >
         My Contracts
       </Link>
@@ -71,7 +71,7 @@ export function NavLinks() {
           <DropdownTrigger>
             <Button
               disableRipple
-              className="p-0 bg-transparent font-semibold text-[14px] data-[hover=true]:bg-transparent text-[#1A1A1A] hover:text-[#B0B0B0]"
+              className="p-0 bg-transparent font-medium text-[15px] data-[hover=true]:bg-transparent text-[#1A1A1A] hover:text-[#B0B0B0]"
               endContent={icons.chevron}
               radius="sm"
               variant="light"

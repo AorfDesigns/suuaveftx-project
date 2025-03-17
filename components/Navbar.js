@@ -26,7 +26,7 @@ const CustomNavbar = () => {
       classNames={{ wrapper: "max-w-[1700px] mx-auto px-3" }}
       onScrollPositionChange={(position) => {
         if (position > 600) {
-          setTextStyle("text-yellow-500 bg-black/50");
+          setTextStyle(" text-white bg-black/50   ");
         } else {
           setTextStyle("text-white bg-transparent");
         }
@@ -37,7 +37,7 @@ const CustomNavbar = () => {
         <Image
           src="/dev-images/navLogo.png"
           alt="Logo"
-          className="lg:w-44 py-4 w-32" // Reduced space between the logo and form
+          className="lg:w-40 py-4 w-32" // Reduced space between the logo and form
         />
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-14 " justify="center">
@@ -46,29 +46,29 @@ const CustomNavbar = () => {
           className="sm:hidden"
         />
         <NavbarItem>
-          <Link href="#" className={`${textStyle} transition duration-300`}>
+          <Link href="#" className={` text-white transition duration-300`}>
             Blogs
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="#" className={`${textStyle} transition duration-300`}>
+          <Link href="#" className={` text-white transition duration-300`}>
             How it works
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="#" className={`${textStyle} transition duration-300`}>
+          <Link href="#" className={` text-white transition duration-300`}>
             FAQs
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="#" className={`${textStyle} transition duration-300`}>
+          <Link href="#" className={` text-white transition duration-300`}>
             About us
           </Link>
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end" className="space">
         <NavbarItem className="hidden lg:flex">
-          <Link href="#" className={`${textStyle} transition duration-300`}>
+          <Link href="#" className={` text-white transition duration-300`}>
             Login
           </Link>
         </NavbarItem>
@@ -81,7 +81,7 @@ const CustomNavbar = () => {
           className={`sm:hidden text-white font-bold text-lg size-6`}
         />
       </NavbarContent>
-      <NavbarMenu className="bg-black/50">
+      <NavbarMenu className="">
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link

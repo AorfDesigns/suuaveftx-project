@@ -206,6 +206,7 @@ const page = () => {
                   userName={card.author}
                   description={card.description}
                   productID={card.id}
+                  idx={index}
                 />
               ))}
             </div>
@@ -232,6 +233,7 @@ const page = () => {
                   userName={card.author}
                   description={card.description}
                   productID={card.id}
+                  idx={index}
                 />
               ))}
             </div>
