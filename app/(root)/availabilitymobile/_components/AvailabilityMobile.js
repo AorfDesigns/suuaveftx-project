@@ -81,7 +81,7 @@ const AvailabilityMobile = () => {
             Skip
           </button>
           <Link href={"/awardsmobile"}>
-            <button className="bg-[#E8E8E8] text-[#444444] pl-[24px] pr-[24px] pt-[16px] pb-[16px] rounded-full flex-1 w-[128px] h-[52px] text-sm">
+            <button className="bg-[radial-gradient(circle,#FFFFFF,#CCE7F2)] text-[#0A4A66]  pl-[24px] pr-[24px] pt-[16px] pb-[16px] rounded-full flex-1 w-[128px] h-[52px] text-sm">
               Next
             </button>
           </Link>

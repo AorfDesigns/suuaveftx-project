@@ -121,7 +121,7 @@ const AwardMobile = () => {
         <div className="flex justify-between space-x-[39px] mt-6">
           <button className="text-sm text-[#3A98BB] font-bold">Skip</button>
           <Link href={"/donemobile"}>
-            <button className="bg-[#CCE7F2] text-[#444444] pl-[24px] pr-[24px] pt-[16px] pb-[16px] rounded-full flex-1 w-[128px] h-[52px] text-sm">
+            <button className="bg-[radial-gradient(circle,#FFFFFF,#CCE7F2)] text-[#0A4A66] pl-[24px] pr-[24px] pt-[16px] pb-[16px] rounded-full flex-1 w-[128px] h-[52px] text-sm">
               Submit
             </button>
           </Link>

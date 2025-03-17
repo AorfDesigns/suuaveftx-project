@@ -74,7 +74,7 @@ const SkillsForm = ({ setActiveProfessionalLink }) => {
 
   return (
     <div className="flex justify-center items-center min-h-screen">
-      <div className="bg-[#FAFAFA] p-8 w-[1083px] border border-1 border-[#DEDEDE] rounded-lg">
+      <div className="bg-[#FAFAFA] p-8 w-[1083px]  border-1 border-[#DEDEDE] rounded-lg">
         <h2 className="text-[16px] font-semibold mb-2 text-[#3A98BB]">Professional Details</h2>
         <p className="text-[#727272] mb-8 text-[12px]">Add any related information</p>
 

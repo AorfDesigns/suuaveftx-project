@@ -62,9 +62,9 @@ const PortfolioMobile = () => {
 
         {/* Footer Buttons */}
         <div className="flex justify-between space-x-[39px] w-full mt-6 mb-[24px]">
-          <button className="text-[16px] text-[#3A98BB] flex-1">Skip</button>
+          <button className="text-[16px] bg-[#FAFAFA] text-[#3A98BB] flex-1">Skip</button>
           <Link href={"/availabilitymobile"}>
-            <button className="bg-[#E8E8E8] text-[#444444] pl-[24px] pr-[24px] pt-[16px] pb-[16px] w-[128] rounded-full flex-1 h-[52px] text-[16px]">
+            <button className="bg-[radial-gradient(circle,#FFFFFF,#CCE7F2)] text-[#0A4A66]  pl-[24px] pr-[24px] pt-[16px] pb-[16px] w-[128] rounded-full flex-1 h-[52px] text-[16px]">
               Next
             </button>
           </Link>

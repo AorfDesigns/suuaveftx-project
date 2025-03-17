@@ -59,7 +59,7 @@ const SkillsFormMobile = () => {
       <Link href={"/profileupload"}>
         <button
           type="button"
-          className="w-full mt-6 bg-[#CCE7F2] text-[#444444] pl-[24px] pr-[24px] pt-[16px] pb-[16px] rounded-[32px]"
+          className="w-full mt-6 bg-[radial-gradient(circle,#FFFFFF,#CCE7F2)] text-[#0A4A66] pl-[24px] pr-[24px] pt-[16px] pb-[16px] rounded-[32px]"
         >
           Next
         </button>

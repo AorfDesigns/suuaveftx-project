@@ -1,9 +1,11 @@
+
 import React from "react";
 import JobPost from "./_components/JobPost";
 import AppLayout from "../../components/Applayout";
 import SearchBar from "../../components/Searchbar";
 import Footer3 from "../../components/Footer3";
 import Image from "next/image";
+import Footer from "../landingpage/_components/Footer";
 
 const page = () => {
   return (
@@ -20,14 +22,14 @@ const page = () => {
         </h3>
       </div>
 
-      <div>
+      <div className="w-full">
         <SearchBar />
       </div>
       <div>
         <JobPost />
       </div>
       <div className="m-4 w-full bg-[#12333E]">
-        <Footer3 />
+        <Footer />
       </div>
     </AppLayout>
   );

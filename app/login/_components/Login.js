@@ -17,7 +17,7 @@ const Login = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center p-6">
-      <div className="flex flex-col md:flex-row gap-8 items-center w-full max-w-6xl">
+      <div className="flex flex-col md:flex-row gap-12 items-center w-full max-w-6xl">
         {/* Left section with logo and background image */}
         <div className="flex flex-col items-center justify-center p-6 md:w-[574px] md:h-[700px] w-full h-auto md:mb-0 mb-4"> {/* Reduced bottom margin on mobile */}
          
@@ -29,7 +29,7 @@ const Login = () => {
 
         {/* Right section for Login with border */}
         <div
-          className="flex flex-col justify-center items-center bg-white pl-[32px] pr-[32px] pt-[45px] pb-[45px]  md:w-[446px] md:h-[360px] border-2 border-gray-300 shadow-md rounded-lg"
+          className="flex flex-col justify-center items-center bg-white pl-[32px] pr-[32px] pt-[45px] pb-[45px] border-2 border-gray-300 shadow-md rounded-lg"
         >
           <div className='mt-[45px]'>
             <Image

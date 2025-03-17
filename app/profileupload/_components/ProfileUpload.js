@@ -129,9 +129,9 @@ const ProfileUpload = () => {
       <div className="flex justify-center items-center w-full mt-6 space-x-[39px]">
         {" "}
         {/* space-x-[39px] for 39px gap */}
-        <button className="text-sm text-gray-500">Skip</button>
+        <button className=" bg-[#FAFAFA] text-sm text-[#0A4A66]">Skip</button>
         <Link href={"/nationalitymobile"}>
-          <button className="bg-[#CCE7F2] text-[#444444] pl-[24px] pr-[24px] pt-[16px] pb-[16px] rounded-full w-[128px] h-[52px] text-sm">
+          <button className="bg-[radial-gradient(circle,#FFFFFF,#CCE7F2)]  text-[#0A4A66] pl-[24px] pr-[24px] pt-[16px] pb-[16px] rounded-full w-[128px] h-[52px] text-sm">
             Next
           </button>
         </Link>
