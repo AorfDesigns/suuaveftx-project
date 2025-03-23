@@ -33,7 +33,7 @@ const UserTwitterCard = () => {
           className={
             isFollowed
               ? "bg-transparent text-foreground border-default-200"
-              : ""
+              : null
           }
           color="primary"
           radius="full"

@@ -120,6 +120,7 @@ const ProporsalModal = ({ proposals }) => {
                   {data.map((item, idx) => (
                     <Card
                       shadow="none"
+                      key={idx}
                       className="border"
                       onPress={() => goToProduct(item.id)}
                       isPressable
