@@ -3,6 +3,7 @@ import { Card, CardBody } from "@heroui/card";
 import Image from "next/image";
 import CustomButton from "../../../components/CustomButton";
 import AcceptModal from "../../../components/AcceptModal";
+import DeclineModal from "../../../components/DeclineModal";
 
 const jobDetails = {
   details: [
@@ -21,8 +22,8 @@ const jobDetails = {
 
 export default function JobCard() {
   return (
-    <div className="flex flex-col justify-center p-6">
-      <Card className="w-full h-[100vh] p-4 shadow-lg">
+    <div className="flex flex-col p-6">
+      <Card className="w-full h-[100vh] p-4 shadow-lg border-1 border-[#D3D3D3]">
         <CardBody className="space-y-4">
           {/* Mapping through job details */}
           {jobDetails.details.map((item, index) => (
@@ -47,7 +48,7 @@ export default function JobCard() {
 
           {/* Buttons */}
           <div className="flex gap-4">
-            <CustomButton text="Decline" />
+            <DeclineModal />
             <AcceptModal />
           </div>
         </CardBody>

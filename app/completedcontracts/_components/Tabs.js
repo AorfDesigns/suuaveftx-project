@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import OngoingContracts from "./OngoingContracts";
+import CompletedContracts from "./CompletedContracts";
 
 const cn = (...classes) => classes.filter(Boolean).join(" ");
 
@@ -11,23 +13,32 @@ const tabs = [
 ];
 
 export default function UnderlinedTabs() {
-  const [activeTab, setActiveTab] = useState("completed"); // Set "completed" as default
+  const [activeTab, setActiveTab] = useState("completed"); // Default tab
 
   return (
-    <div className="w-full max-w-lg mx-auto">
-      <div className="flex border-b">
-        {tabs.map((tab) => (
-          <button
-            key={tab.id}
-            onClick={() => setActiveTab(tab.id)}
-            className={cn(
-              "flex-1 py-2 text-center font-medium text-gray-600 transition-colors duration-200",
-              activeTab === tab.id ? "border-b-2 border-blue-500 text-blue-600" : ""
-            )}
-          >
-            {tab.label}
-          </button>
-        ))}
+    <div className="w-full mx-auto">
+      {/* Tabs */}
+      <div className="flex border-b w-full gap-4">
+  {tabs.map((tab) => (
+    <button
+      key={tab.id}
+      onClick={() => setActiveTab(tab.id)}
+      className={cn(
+        "py-2 text-center font-medium text-gray-600 transition-colors duration-200 inline-block px-4",
+        activeTab === tab.id ? "border-b border-[#3A98BB] text-blue-600 w-fit" : ""
+      )}
+    >
+      {tab.label}
+    </button>
+  ))}
+</div>
+
+
+      {/* Display Components Based on Active Tab */}
+      <div className="mt-4">
+        {activeTab === "ongoing" && <OngoingContracts />}
+        {activeTab === "completed" && <CompletedContracts />}
+        {activeTab === "pending" && <div>Pending Contracts Component</div>}
       </div>
     </div>
   );

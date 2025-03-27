@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: #f1f1f1;
   --foreground: #171717;
 }
 
@@ -61,6 +61,7 @@ body {
   /* font-family: Arial, Helvetica, sans-serif; */
 }
 
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -76,3 +77,37 @@ body {
 .break-text {
   white-space: pre-line;
 }
+
+
+@layer utilities {
+  /* Custom scrollbar for WebKit browsers (Chrome, Safari) */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+    height: 25px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #fafafa;
+    border-radius: 10px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #fafafa;
+    border-radius: 10px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #fafafa;
+  }
+
+  /* Firefox scrollbar */
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #3A98BB #fafafa;
+  }
+}
+.heroui-tab {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+

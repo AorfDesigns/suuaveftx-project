@@ -8,13 +8,15 @@ import {
     useDisclosure,
     Textarea,
   } from "@heroui/react";
+import CustomButton from "./CustomButton";
+import Image from "next/image";
   
   const AcceptModal = () => {
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
   
     return (
       <>
-        <Button color="primary" onPress={onOpen}>
+        <Button className="bg-[radial-gradient(circle,#FFFFFF,#CCE7F2)] rounded-full" onPress={onOpen}>
           Accept Offer
         </Button>
         <Modal isOpen={isOpen} placement="top-center" onOpenChange={onOpenChange}>
@@ -41,9 +43,7 @@ import {
                 </ModalBody>
                 <ModalFooter>
                   
-                  <Button color="primary" onPress={onClose} className="bg-[radial-gradient(circle,#FFFFFF,#CCE7F2)] rounded-full text-[#0A4A66]">
-                    Accept
-                  </Button>
+                <CustomButton text="Accept" className="bg-[#CCE7F2] text-[#222222] flex items-center justify-center" icon={<Image src={"/dev-images/Arrowside.png"} alt="submit" width={15} height={15} />} />
                 </ModalFooter>
               </>
             )}

@@ -119,7 +119,7 @@ const SendProposal = (props) => {
     <div className='mt-16'>
         <hr></hr>
     </div>
-   <div className='mt-16'>
+   <div className='mt-4'>
    <Select
           isRequired
           label="How Long Will It Take You To Complete This Work ?"
