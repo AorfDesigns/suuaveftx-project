@@ -3,13 +3,15 @@
 import { useState } from "react";
 import OngoingContracts from "./OngoingContracts";
 import CompletedContracts from "./CompletedContracts";
+import PendingProjects from "./PendingProject";
+
 
 const cn = (...classes) => classes.filter(Boolean).join(" ");
 
 const tabs = [
-  { id: "ongoing", label: "Ongoing Contracts" },
-  { id: "completed", label: "Completed Contracts" },
-  { id: "pending", label: "Pending Contracts" },
+  { id: "ongoing", label: "Ongoing Contracts(3)" },
+  { id: "completed", label: "Completed Contracts(4)" },
+  { id: "pending", label: "Pending Contracts(2)" },
 ];
 
 export default function UnderlinedTabs() {
@@ -38,7 +40,7 @@ export default function UnderlinedTabs() {
       <div className="mt-4">
         {activeTab === "ongoing" && <OngoingContracts />}
         {activeTab === "completed" && <CompletedContracts />}
-        {activeTab === "pending" && <div>Pending Contracts Component</div>}
+        {activeTab === "pending" && <PendingProjects />}
       </div>
     </div>
   );

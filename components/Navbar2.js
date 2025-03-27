@@ -9,12 +9,14 @@ import {
   NavbarMenuItem,
   NavbarMenu,
 } from "@heroui/react";
-import React from "react";
+import React, { useState } from "react";
 import CustomButton from "./CustomButton";
+import { ChevronDown } from "lucide-react";
 
 const Navbars = () => {
   const [textStyle, setTextStyle] = React.useState("text-black");
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
     { label: "Jobs", href: "/jobpost" },
@@ -78,9 +80,28 @@ const Navbars = () => {
             </Link>
           </NavbarItem>
         </div>
-        <NavbarItem className="hidden lg:flex">
-          <Image src="/dev-images/Avatar.png" alt="Avatar" width={48} height={48} />
-        </NavbarItem>
+        <div className="relative">
+      {/* Profile Image with Downward Arrow */}
+      <button onClick={() => setIsOpen(!isOpen)} className="flex items-center space-x-2 focus:outline-none">
+        <Image src="/dev-images/Avatar.png" alt="Avatar" width={48} height={48} className="cursor-pointer rounded-full" />
+        <ChevronDown className={`w-5 h-5 text-gray-600 transition-transform ${isOpen ? "rotate-180" : ""}`} />
+      </button>
+
+      {/* Dropdown Menu */}
+      {isOpen && (
+        <div className="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg py-2">
+          <Link href="/fashionprofile" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+            My Profile
+          </Link>
+          <Link href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+            Logout
+          </Link>
+          <Link href="/settings" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+            Settings
+          </Link>
+        </div>
+      )}
+    </div>
         <Link className="lg:hidden text-black">Login</Link>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}

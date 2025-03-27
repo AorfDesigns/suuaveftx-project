@@ -10,7 +10,6 @@ const page = () => {
       <h1>My Contracts</h1>
       </div>
       <UnderlinedTabs />
-
     </div>
   )
 }
