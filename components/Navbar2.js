@@ -93,12 +93,19 @@ const Navbars = () => {
           <Link href="/fashionprofile" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
             My Profile
           </Link>
-          <Link href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-            Logout
+          <Link href="/payment" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+            Wallet
+          </Link>
+          <Link href="/settings" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+            Support
           </Link>
           <Link href="/settings" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
             Settings
           </Link>
+          <Link href="/#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+            Logout
+          </Link>
+          
         </div>
       )}
     </div>

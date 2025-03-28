@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import OngoingContracts from "./SubmitContract";
 import CompletedContracts from "./SubmitContract2";

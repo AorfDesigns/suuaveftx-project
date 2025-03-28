@@ -1,7 +1,9 @@
+'use client'
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { FaUser, FaUpload, FaShoppingBag } from 'react-icons/fa';
+import CustomButton from '../../../components/CustomButton';
 
 const Designer = () => {
   return (
@@ -36,22 +38,20 @@ const Designer = () => {
 
         {/* Continue Button */}
         <Link href={"/personalprofile2"}>
-        <button className="mt-6 bg-[#CCE7F2] text-[#444444] font-semibold pl-[24px] pr-[24px] pt-[16px] pb-[16px] rounded-full w-48">
-          Continue
-        </button>
+       <CustomButton text='continue' className="w-32 mt-4" />
         </Link>
       </div>
 
-      {/* Right section with background image */}
-      <div
-        className="hidden md:block bg-cover bg-center rounded-2xl mt-[76px]"
-        style={{
-          width: '649px',
-          height: '649px',
-          backgroundImage: "url('/dev-images/Fashion.png')", // Replace with your background image path
-        }}
-      />
-    </div>
+       {/* Right section with background image */}
+  <div
+    className="hidden md:block bg-cover bg-center rounded-2xl"
+    style={{
+      width: "520px",
+      height: "520px",
+      backgroundImage: "url('/dev-images/Fashion.png')", // Replace with your background image path
+    }}
+  />
+</div>
   );
 };
 

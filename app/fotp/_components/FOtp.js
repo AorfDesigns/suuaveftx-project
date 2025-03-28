@@ -2,90 +2,57 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
+import {InputOtp} from "@heroui/react";
+import CustomButton from '../../../components/CustomButton';
 
 const FOtp = () => {
-  const [otp, setOtp] = useState(new Array(6).fill(''));
-
-  const handleOtpChange = (e, index) => {
-    if (isNaN(e.target.value)) return;
-    const newOtp = [...otp];
-    newOtp[index] = e.target.value;
-    setOtp(newOtp);
-
-    // Move to the next input if current is filled
-    if (e.target.value && index < 5) {
-      document.getElementById(`otp-input-${index + 1}`).focus();
-    }
-  };
-
-  const handleResend = () => {
-    console.log("Resend OTP");
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const otpCode = otp.join('');
-    console.log("OTP submitted:", otpCode);
-  };
+  const [value, setValue] = React.useState("");
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-6">
-      <div className="flex justify-between items-center w-full max-w-6xl">
-        {/* Left section with logo and background image */}
-        <div className="flex flex-col items-start justify-center p-6" style={{ width: '574px', height: '700px', borderRadius: '16px' }}>
-          <Image src="/dev-images/logo.png" alt="Logo" width={40} height={40} />
-          <div className="mt-8">
-            <Image src="/dev-images/bg.png" alt="Background Image" width={574} height={700} className="rounded-lg" />
-          </div>
-        </div>
+    <div className="lg:min-h-screen flex items-center lg:justify-center p-6">
+      <div className="flex flex-col md:flex-row items-center w-full max-w-6xl gap-12">
+        {/* Left section with logo and background image, hidden on mobile */}
+        <div className="flex flex-col items-start justify-center p-6 md:w-[574px] md:h-[700px] w-full h-auto md:mb-0 mb-8">
+
+  <div className="mt-8 md:block hidden">
+    <Image
+      src="/dev-images/bg.png" 
+      alt="Background Image" 
+      className="rounded-lg w-full h-auto md:w-[500px] md:h-[500px]" 
+      width={500}
+      height={500}
+    />
+  </div>
+</div>
+
 
         {/* Right section for OTP confirmation */}
         <div
-          className="flex flex-col justify-center items-center bg-white shadow-lg pl-[32px] pr-[32px] pt-[45px] pb-[45px]"
-          style={{ width: '446px', height: '360px', borderRadius: '16px' }}
-        >
-          <div className="w-full p-6">
-            <h1 className="text-2xl font-semibold text-[#444444] mt-[45px] mb-[24px]">Confirm your email address</h1>
-            <p className="text-[#727272] mb-[24px]">
-              Kindly enter the six (6) digit code sent to your email address.
-            </p>
+  className="flex flex-col mt-[-80px] items-start pl-4 pr-4 pt-[45px] pb-[45px] bg-white shadow-[0px_4px_16px_0px_rgba(0,0,0,0.15)] md:pl-8 md:pr-8 md:pt-11 md:pb-11 rounded-lg"
+>
+  {/* Inner content wrapper */}
+  <div className="w-full flex flex-col items-start">
+    <h1 className="text-[22px] font-semibold text-[#444444]">
+      Confirm your email address
+    </h1>
+    <p className="text-[#727272] w-[304px]">
+      Kindly enter the six (6) digit code sent to your email address.
+    </p>
 
-            {/* OTP input fields */}
-            <form onSubmit={handleSubmit} className="flex flex-col">
-              <div className="flex space-x-2 mb-[24px] gap-2">
-                {otp.map((_, index) => (
-                  <input
-                    key={index}
-                    type="text"
-                    maxLength="1"
-                    id={`otp-input-${index}`}
-                    value={otp[index]}
-                    onChange={(e) => handleOtpChange(e, index)}
-                    className="w-10 h-10 border border-gray-300 text-center rounded-lg text-lg"
-                  />
-                ))}
-              </div>
+    {/* OTP input fields */}
+    <div className="flex flex-col items-start gap-2">
+      <InputOtp length={6} value={value} onValueChange={setValue} />
+      <div className="text-small text-default-500">
+        Didn’t receive code? <span className="text-md font-medium">Resend</span>
+      </div>
+    </div>
+  </div>
+  <div className="mt-4">
+    <CustomButton text="Submit" className="w-72" href="/flogin" />
+  </div>
+</div>
 
-              {/* Resend code link */}
-              <p className="text-gray-600 mb-[24px] text-[12px]">
-                Didn&apos;t receive the code?{" "}
-                <span className="text-[#9FD2E5] cursor-pointer hover:underline" onClick={handleResend}>
-                  Resend
-                </span>
-              </p>
 
-              {/* Submit button */}
-              <Link href={"/flogin"}>
-              <button
-                type="submit"
-                className="w-full pl-[24px] pr-[24px] pt-[16px] pb-[16px] bg-[#CCE7F2] font-semibold text-[#444444] rounded-full mb-[45px]"
-              >
-                Submit
-              </button>
-              </Link>
-            </form>
-          </div>
-        </div>
       </div>
     </div>
   );

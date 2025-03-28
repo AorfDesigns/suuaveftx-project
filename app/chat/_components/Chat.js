@@ -1,11 +1,12 @@
+'use client'
 import React from "react";
 import { Card, CardHeader } from "@heroui/react";
 import CustomButton from "../../../components/CustomButton";
 import SearchBar from "../../../components/Searchbar";
 import SortByDropdown from "../../../components/SortByDropdown";
-import SubmitModal from "../../../components/SubmitModal";
+import Modal3 from "../../../components/Modal3";
 
-const OngoingContracts = () => {
+const Chat = () => {
   return (
     <>
     <div className="flex items-center gap-x-2">
@@ -36,8 +37,8 @@ const OngoingContracts = () => {
 
             {/* Buttons */}
             <div className="flex gap-4 items-center">
-              <SubmitModal />
-              <CustomButton text="Chat Client" className="bg-transparent border-1 border-[#767676] text-[#767676]" href={"/chat"} />
+              <Modal3 />
+              <CustomButton text="Chat Client" className="bg-transparent border-1 border-[#767676] text-[#767676]" />
               <span className="text-blue-500 cursor-pointer text-lg">More......</span>
             </div>
           </Card>
@@ -48,4 +49,4 @@ const OngoingContracts = () => {
   );
 };
 
-export default OngoingContracts;
+export default Chat;

@@ -7,7 +7,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import CustomButton from '../../../components/CustomButton';
 
-const EmailSignin = () => {
+const FEmailSignin = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -118,7 +118,7 @@ const EmailSignin = () => {
 
     {/* Login Button */}
     <div className="flex justify-center">
-      <CustomButton text="Login" className="w-96" href="/fashionartist" />
+      <CustomButton text="Login" className="w-96" href="/designer" />
     </div>
 
     {/* Don't have an account prompt */}
@@ -141,4 +141,4 @@ const EmailSignin = () => {
   );
 };
 
-export default EmailSignin;
+export default FEmailSignin;
