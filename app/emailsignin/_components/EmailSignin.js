@@ -25,7 +25,7 @@ const EmailSignin = () => {
 
       {/* Background image hidden on mobile */}
       <div className="mt-8 sm:block hidden">
-        <Image src="/dev-images/bg.png" alt="Background Image" width={574} height={700} className="rounded-lg" />
+        <Image src="/dev-images/bg.png" alt="Background Image" width={500} height={500} className="rounded-lg w-[500px] h-[500px]" />
       </div>
     </div>
 

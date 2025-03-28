@@ -16,7 +16,7 @@ const License = () => {
                 </p>
             </div>
             
-            <div className='bg-[#FAFAFA] p-4 w-4/5 ml-8 mt-4 flex flex-col gap-6'>
+            <div className='bg-[#FAFAFA] border-1 border-[#DDDDDD] p-4 w-4/5 ml-8 mt-4 flex flex-col gap-6'>
                 {/* Design Title & Description */}
                 <div className='flex flex-col gap-4 w-full'>
                     <Input
@@ -48,7 +48,7 @@ const License = () => {
                     <p className='text-sm'>Uploading different views (e.g., front, back, and side views) helps attract potential clients faster.</p>
                     <div className="flex gap-16  whitespace-nowrap">
     {[...Array(5)].map((_, index) => (
-        <div key={index} className="border-2 border-[#d1d1d1] rounded-lg p-4 flex flex-col items-center justify-center gap-2 cursor-pointer w-[110px] h-[110px]">
+        <div key={index} className="border-2 border-[#d1d1d1] rounded-lg p-4 flex flex-col items-center justify-center gap-1 cursor-pointer w-[110px] h-[110px]">
             <Image size={24} className="text-gray-500" alt="image-upload" />
         </div>
     ))}
@@ -80,7 +80,7 @@ const License = () => {
                     <p className='text-sm'>By publishing, you confirm you have the necessary rights and permission to the ownership of this design. <a href="#" className='text-blue-600 underline'>Learn More</a></p>
                 </div>
                 <div className='flex gap-4'>
-                  <CustomButton text='Save as Draft' />
+                  <CustomButton text='Save as Draft' className="bg-[#F0F0F0] text-[#222222]" />
                   <CustomButton text='Publish Project' />
                 </div>
             </div>

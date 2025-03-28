@@ -6,7 +6,7 @@ export default function ProposalTables() {
     <>
     <h1 className="font-bold text-2xl ml-4 mt-16 border-b border-gray-300">Proposals</h1>
     <div className="flex items-center min-h-screen mt-[-42] ml-4">
-    <Table removeWrapper aria-label="Example static collection table" className="bg-[#F1F1F1] text-black
+    <Table removeWrapper aria-label="Example static collection table" className="bg-[#FAFAFA] text-black
      w-4/5 flex flex-col justify-center items-center rounded-2xl">
       <TableHeader className="!bg-transparent border-b border-gray-300">
         <TableColumn className="font-bold">Job Post</TableColumn>

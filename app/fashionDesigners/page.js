@@ -7,7 +7,7 @@ import { IoSearchOutline } from "react-icons/io5";
 import FashionDesignersCard from "./_components/FashionDesignersCard";
 import Footer from "../landingpage/_components/Footer";
 
-const page = () => {
+const Page = () => {
   const [isVisible, setIsVisible] = useState(true);
 
   const cardsData = [
@@ -244,4 +244,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

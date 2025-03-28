@@ -14,7 +14,7 @@ import {
 import React from "react";
 import { GoPaperclip } from "react-icons/go";
 
-const page = () => {
+const Page = () => {
   const [action, setAction] = React.useState(null);
 
   const classes = { label: "font-bold " };
@@ -242,4 +242,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

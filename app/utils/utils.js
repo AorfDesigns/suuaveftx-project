@@ -7,34 +7,34 @@ export function cn(...inputs) {
 
 export const homePageCardData = [
   {
-    title: "Secure Payment",
+    title: "Secure Transaction",
     text: "We use the best, most secure pay-out gateway. Every due payment is processed without delay.",
     image: "/dev-images/Secure.png", // Replace with actual image URL or path
   },
   {
     title: "Copyright Protection",
-    text: "Suave offers Copyright Protection and Business Promotion to all designers and designs posted.",
+    text: "We prioritize fairness for all users and prevent unauthorized use of designs. ",
     image: "/dev-images/copy.png",
   },
   {
     title: "User Verification",
-    text: "Verification in the sign-up and collaboration process to ensure high-quality delivery.",
+    text: "We create a safe environment for users, fostering trust and encouraging genuine collaboration",
     image: "/dev-images/user.png",
   },
   {
     title: "Streamlined Collaboration",
-    text: "Streamlined process to simplify collaboration and communication.",
+    text: "We facilitate efficient and productive partnerships with our messaging and product management features to improve the overall user experience.",
     image: "/dev-images/streamed.png",
   },
   {
     title: "Open Dispute Resolution",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi convallis condimentum.",
+    text: "We reduce the risk of disputes to maintain a positive and productive environment for everyone. ",
     image: "/dev-images/justice.png",
   },
   {
-    title: "Exclusivity",
-    text: "An exclusive market that focuses on African fashion, offering a unique and targeted talent pool.",
-    image: "/dev-images/target.png",
+    title: "Community Development",
+    text: "We empower our users and contribute to the development of the African fashion industry.",
+    image: "/dev-images/web.png",
   },
 ];
 
@@ -50,8 +50,8 @@ export const fashionSection = [
     image: "/dev-images/Apply.png",
   },
   {
-    title: "Publish Your Designs For Licensing",
-    text: "Post your designs for brands/designers to license or buy exclusive right to use in their collections. Earn money.",
+    title: "Monetize Your Vision",
+    text: "Upload your designs and earn income by licensing them to top fashion designers and brands",
     image: "/dev-images/publish.png",
   },
   {
@@ -64,17 +64,17 @@ export const fashionSection = [
 export const fashionDsignRightSection = [
   {
     title: "Register",
-    text: "Create profile, showcasing your brand identity to explore pool of limitless designs.",
+    text: "Build your brand profile, and unlock access to a world of exceptional African talents.",
     btnText: "Get Started",
   },
   {
-    title: "Post Jobs and Hire Artists",
-    text: "Post jobs descriptions outlining your needs. \nConnect with artists tat resonate with your brand.",
+    title: "Hire Effortlessly",
+    text: "Post your project needs and find the artists who resonate with your brand, all in one place.",
     btnText: "Post Jobs",
   },
   {
     title: "Explore and License",
-    text: "Browse our gallery of stunning designs.\nAcquire licenses for existing designs that uplifts your brand.\n Seamlessly manage projects and payments within our platform",
+    text: "Discover stunning designs and elevate your brand with authentic African creativity.",
     btnText: "Explore",
   },
 ];

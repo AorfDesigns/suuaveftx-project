@@ -1,100 +1,133 @@
 "use client";
-import Image from "next/image";
-import { useState } from "react";
-const Navbar2 = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+import {
+  Link,
+  Navbar,
+  NavbarContent,
+  NavbarItem,
+  Image,
+  NavbarMenuToggle,
+  NavbarMenuItem,
+  NavbarMenu,
+} from "@heroui/react";
+import React, { useState } from "react";
+import CustomButton from "./CustomButton";
+import { ChevronDown } from "lucide-react";
+
+const Navbars = () => {
+  const [textStyle, setTextStyle] = React.useState("text-black");
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const menuItems = [
+    { label: "Jobs", href: "/jobpost" },
+    { label: "Proposals", href: "/tableproposals" },
+    { label: "My Contracts", href: "/completedcontracts" },
+  ];
+
+  const mobileMenuItems = [
+    { label: "Home", href: "/" },
+    { label: "Jobs", href: "/jobpost" },
+    { label: "Proposals", href: "/proposals" },
+    { label: "My Contracts", href: "/contracts" },
+    { label: "Profile", href: "/profile" },
+    { label: "Settings", href: "/settings" },
+  ];
 
   return (
-    <nav className="bg-[#000B0F] text-white shadow-md py-7 px-12 font-satoshi">
-      <div className=" mx-auto flex items-center justify-between">
-        {/* Logo */}
-        <div className="flex items-center">
-          <Image
-            src="/dev-images/logo.png"
-            alt="Logo"
-            width={40}
-            height={40}
-            className="mb-4 sm:mb-0" // Reduced space between the logo and form
-          />
-        </div>
-
-        {/* Right Section for Mobile */}
-        <div className="flex items-center md:hidden space-x-4">
-          {/* Login Button */}
-          <button className="text-sm text-[#CECECE]">Login</button>
-          {/* Menu Toggle */}
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="text-white focus:outline-none"
-          >
-            <div className="w-6 h-1 bg-white mb-1"></div>
-            <div className="w-6 h-1 bg-white mb-1"></div>
-            <div className="w-6 h-1 bg-white"></div>
-          </button>
-        </div>
-
-        {/* Desktop Menu Links */}
-        <ul className="hidden md:flex space-x-8 text-lg">
-          <li>
-            <a href="#blogs">Blogs</a>
-          </li>
-          <li>
-            <a href="#how-it-works">How It Works</a>
-          </li>
-          <li>
-            <a href="#faqs">FAQs</a>
-          </li>
-          <li>
-            <a href="#about-us">About Us</a>
-          </li>
-        </ul>
-
-        {/* Right Section for Desktop */}
-        <div className="hidden md:flex items-center space-x-16">
-          <button>Login</button>
-          <button
-            className="text-[#035A7A] px-6 py-3 rounded-full transition hover:opacity-90"
-            style={{
-              background: "radial-gradient(circle, #EAF9FF 19%, #CCE7F2 100%)",
-            }}
-          >
-            Get Started
-          </button>
-        </div>
+    <Navbar
+      shouldHideOnScroll
+      className="w-full bg-white items-center font-satoshi shadow-md px-2 flex-nowrap"
+      classNames={{ wrapper: "max-w-[1700px]" }}
+      onScrollPositionChange={(position) => {
+        setTextStyle(position > 600 ? "text-yellow-500" : "text-black");
+      }}
+      onMenuOpenChange={setIsMenuOpen}
+    >
+      {/* LOGO */}
+      <div>
+        <Link href="/jobpost">
+        <Image
+          src="/dev-images/logocombo.png"
+          alt="Logo"
+          className="lg:w-32 w-24 h-auto object-contain"
+        />
+        </Link>
       </div>
 
-      {/* Mobile Menu */}
-      {menuOpen && (
-        <div className="md:hidden bg-[#000B0F] p-4">
-          <ul className="flex flex-col items-start space-y-4 text-lg">
-            <li>
-              <a href="#blogs">Blogs</a>
-            </li>
-            <li>
-              <a href="#how-it-works">How it works</a>
-            </li>
-            <li>
-              <a href="#faqs">FAQs</a>
-            </li>
-            <li>
-              <a href="#about-us">About Us</a>
-            </li>
-          </ul>
-          <div className="flex flex-col items-start mt-4">
-            <button
-              className="text-[#035A7A] px-6 py-3 rounded-full transition hover:opacity-90"
-              style={{
-                background:
-                  "radial-gradient(circle, #EAF9FF 19%, #CCE7F2 100%)",
-              }}
-            >
-              Get Started
-            </button>
-          </div>
+      {/* MENU */}
+      <NavbarContent className="hidden sm:flex gap-8 ml-8 font-bold" justify="center">
+        {menuItems.map((item, index) => (
+          <NavbarItem key={index}>
+            <Link href={item.href} className={`${textStyle} transition duration-300`}>
+              {item.label}
+            </Link>
+          </NavbarItem>
+        ))}
+      </NavbarContent>
+
+      {/* LOGIN & BUTTON */}
+      <NavbarContent justify="end" className="gap-8">
+        <NavbarItem>
+          <CustomButton className="hidden lg:flex" text="License Your Designs" href={"/license"} />
+        </NavbarItem>
+        <div className="flex gap-2">
+          <NavbarItem className="hidden lg:flex">
+            <Image src="/dev-images/Bell.png" alt="Bell" width={24} height={24} />
+          </NavbarItem>
+          <NavbarItem className="hidden lg:flex">
+            <Link href="/messages">
+            <Image src="/dev-images/Messages.png" alt="Messages" width={24} height={24} />
+            </Link>
+          </NavbarItem>
+        </div>
+        <div className="relative">
+      {/* Profile Image with Downward Arrow */}
+      <button onClick={() => setIsOpen(!isOpen)} className="flex items-center space-x-2 focus:outline-none">
+        <Image src="/dev-images/Avatar.png" alt="Avatar" width={48} height={48} className="cursor-pointer rounded-full" />
+        <ChevronDown className={`w-5 h-5 text-gray-600 transition-transform ${isOpen ? "rotate-180" : ""}`} />
+      </button>
+
+      {/* Dropdown Menu */}
+      {isOpen && (
+        <div className="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg py-2">
+          <Link href="/fashionprofile" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+            My Profile
+          </Link>
+          <Link href="/payment" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+            Wallet
+          </Link>
+          <Link href="/settings" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+            Support
+          </Link>
+          <Link href="/settings" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+            Settings
+          </Link>
+          <Link href="/#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+            Logout
+          </Link>
+          
         </div>
       )}
-    </nav>
+    </div>
+        <Link className="lg:hidden text-black">Login</Link>
+        <NavbarMenuToggle
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          className="sm:hidden text-black font-bold text-lg size-6"
+        />
+      </NavbarContent>
+
+      {/* MOBILE MENU */}
+      <NavbarMenu>
+        {mobileMenuItems.map((item, index) => (
+          <NavbarMenuItem key={index}>
+            <Link className="w-full text-black transition duration-300" href={item.href} size="lg">
+              {item.label}
+            </Link>
+          </NavbarMenuItem>
+        ))}
+      </NavbarMenu>
+    </Navbar>
   );
 };
 
-export default Navbar2;
+export default Navbars;

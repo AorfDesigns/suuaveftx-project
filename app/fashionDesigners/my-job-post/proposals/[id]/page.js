@@ -5,7 +5,7 @@ import CustomButton from "../../../../../components/CustomButton";
 import { TiLocation } from "react-icons/ti";
 import { FaStar } from "react-icons/fa";
 
-const page = ({ params }) => {
+const Page = ({ params }) => {
   const { id } = use(params); // Unwrap the promise before accessing `id`
 
   return (
@@ -100,4 +100,4 @@ const page = ({ params }) => {
   );
 };
 
-export default page;
+export default Page;

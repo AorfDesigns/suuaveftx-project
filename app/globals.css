@@ -4,6 +4,8 @@
 
 /* globals.css */
 :root {
+  --background: #fafafa;
+  --foreground: #171717;
   --font-montserrat: "Montserrat", sans-serif;
   --font-geist-sans: "Geist Sans", sans-serif;
   --font-geist-mono: "Geist Mono", monospace;
@@ -51,22 +53,6 @@
   font-style: normal;
 }
 
-body {
-  /* font-family: Arial, Helvetica, sans-serif; */
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
-
-/* .svg-div {
-  background-image: url("/path-to-your-image.svg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-} */
 .break-text {
   white-space: pre-line;
 }
@@ -84,8 +70,6 @@ body {
     display: none;
   }
 }
-
-
 
 @layer base {
   :root {
@@ -141,15 +125,48 @@ body {
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
-}
 
-
-
-@layer base {
   * {
     @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Custom scrollbar for WebKit browsers (Chrome, Safari) */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+    height: 25px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #fafafa;
+    border-radius: 10px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #fafafa;
+    border-radius: 10px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #fafafa;
+  }
+
+  /* Firefox scrollbar */
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #3a98bb #fafafa;
+  }
+}
+
+.heroui-tab {
+  background-color: transparent !important;
+  box-shadow: none !important;
 }
