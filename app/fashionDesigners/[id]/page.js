@@ -23,7 +23,7 @@ import { TiLocation } from "react-icons/ti";
 const ProductDetails = ({ params }) => {
   const { id } = params; // Extract 'id' from the params object
 
-  console.log(id);
+  // console.log(id);
 
   // const [product, setProduct] = useState(null);
 
@@ -66,7 +66,7 @@ const ProductDetails = ({ params }) => {
       {/* Left Section: Images */}
       <div className="w-full ">
         <div className=" p-4 bg-white shadow-sm rounded-lg grid grid-cols-[0.2fr_1fr] gap-4 w-full">
-          <div className="flex flex-col gap-3 ">
+          <div className="flex-col gap-3 hidden lg:flex">
             {product.images.map((img, index) => (
               <Button key={index} onPress={() => setSelectedImage(img)}>
                 <Image
@@ -88,7 +88,7 @@ const ProductDetails = ({ params }) => {
               isLoading
               sizes=""
               // removeWrapper={true}
-              className="w-[900px] h-[490px]"
+              className="lg:w-[900px] h-[490px] w-full"
             />
           </div>
         </div>

@@ -17,6 +17,7 @@ import { LuCircleUser } from "react-icons/lu";
 import { HiOutlinePhone } from "react-icons/hi";
 import { TbSettings } from "react-icons/tb";
 import { TbLogout2 } from "react-icons/tb";
+import { Bell, Mail } from "lucide-react";
 
 export function UserActions() {
   return (
@@ -79,6 +80,20 @@ export function UserActions() {
               key="profile"
             >
               Profile
+            </DropdownItem>
+            <DropdownItem
+              startContent={<Bell className="size-4" />}
+              key="notifications"
+              className="lg:hidden flex"
+            >
+              Notifications
+            </DropdownItem>
+            <DropdownItem
+              startContent={<Mail className="size-4" />}
+              key="messages"
+              className="lg:hidden flex"
+            >
+              Messages
             </DropdownItem>
             <DropdownItem
               startContent={<HiOutlinePhone className="size-4" />}
